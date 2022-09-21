@@ -1,0 +1,97 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "blocks": {
+        "8927ac4b-8735-4cd4-9113-b67ce7fec6ac": {
+          "type": "collection",
+          "settings": {
+            "collection": "clothes"
+          }
+        },
+        "0beae49e-d4ba-478f-8466-3d30d23c2061": {
+          "type": "collection",
+          "settings": {
+            "collection": "shoes"
+          }
+        },
+        "241ee7e0-d83f-4e0a-a84c-29e5ca004ed9": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessoires"
+          }
+        }
+      },
+      "block_order": [
+        "8927ac4b-8735-4cd4-9113-b67ce7fec6ac",
+        "0beae49e-d4ba-478f-8466-3d30d23c2061",
+        "241ee7e0-d83f-4e0a-a84c-29e5ca004ed9"
+      ],
+      "settings": {
+        "title_enable": false,
+        "display_type": "selected",
+        "sort": "alphabetical",
+        "grid": "3"
+      }
+    },
+    "logo-list": {
+      "type": "logo-list",
+      "disabled": true,
+      "blocks": {
+        "logo1": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo2": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo3": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo4": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo5": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        },
+        "logo6": {
+          "type": "logo_image",
+          "settings": {
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo1",
+        "logo2",
+        "logo3",
+        "logo4",
+        "logo5",
+        "logo6"
+      ],
+      "settings": {
+        "title": "Our brands",
+        "logo_opacity": 76,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "logo-list"
+  ]
+}

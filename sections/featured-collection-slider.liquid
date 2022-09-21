@@ -1,0 +1,116 @@
+<!--featured-collection.liquid----->
+{%- assign collection = collections[section.settings.home_featured_products] -%}
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+
+<div
+  id="CollectionSection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-grid">
+  {%- if section.settings.title != blank -%}
+    <div class="page-width">
+      <div class="section-header{% if section.settings.view_all %}{% unless settings.type_headers_align_text %} section-header--with-link{% endunless %}{% endif %}">
+        <h2 class="section-header__title">
+          {{ section.settings.title }}
+        </h2>
+        {%- if section.settings.view_all -%}
+          <a href="{{ collections[section.settings.home_featured_products].url }}" class="btn btn--secondary btn--small section-header__link">{{ 'collections.general.all_of_collection' | t }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="page-width">
+    <div>
+      <div class="grid grid--uniform collection-slider">
+        {%- liquid
+              assign grid_item_width = 'small--one-half medium-up--one-quarter'
+        -%}
+
+        {%- if section.settings.home_featured_products == blank or collections[section.settings.home_featured_products].empty? or collections[section.settings.home_featured_products].products_count == 0 -%}
+
+          {%- unless emptyState -%}
+            {%- assign emptyState = true -%}
+          {%- endunless -%}
+
+          <div class="grid__item">
+            <div class="grid grid--uniform">
+              {%- for product in collection.products -%}
+                <div class="grid__item grid-product {{ grid_item_width }}">
+                  <div class="grid-product__content">
+                    <a href="{{ product.url | within: collection }}" class="grid-product__link">
+                      <div class="grid-product__image-mask">
+                        {%- capture current -%}{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
+                        <div class="image-wrap">{{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
+                      </div>
+                      <div class="grid-product__meta">
+                        <div class="grid-product__title">{{ 'home_page.onboarding.product_title' | t }}</div>
+                        <div class="grid-product__price">$29</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              {%- endfor -%}
+            </div>
+          </div>
+
+        {%- else -%}
+
+          {%- for product in collection.products -%}
+            {%- render 'product-grid-item',
+              product: product,
+              collection: collection,
+              quick_shop_enable: false
+            -%}
+          {%- endfor -%}
+
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+{
+  "name": "Collection slider",
+  "class": "index-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.featured-collection.settings.title.label",
+      "default": "Featured collection"
+    },
+    {
+      "type": "collection",
+      "id": "home_featured_products",
+      "label": "t:sections.featured-collection.settings.home_featured_products.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "view_all",
+      "label": "t:sections.featured-collection.settings.view_all.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "divider",
+      "label": "t:sections.featured-collection.settings.divider.label",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection slider"
+    }
+  ],
+  "blocks": [
+    {
+      "type" : "@app"
+    }
+    
+  ]
+}
+{% endschema %}

@@ -1,0 +1,136 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": true
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "disabled": true,
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "settings": {
+            "heading": "Anmleden und 10% Sparen",
+            "text": "Melde dich bei unserem Newsletter an und erhalte einmalig 10% Rabatt auf deine erste Bestellung.",
+            "link": "",
+            "label": "Jetzt Anmleden",
+            "color_tint": "#89d9ff",
+            "color_tint_opacity": 20,
+            "framed": false
+          }
+        },
+        "advanced": {
+          "type": "advanced",
+          "disabled": true,
+          "settings": {
+            "subheading": "Limited time",
+            "heading": "Announce your promotion",
+            "textarea": "Include the smaller details of your promotion in text below the title.",
+            "cta_text1": "Shop This",
+            "cta_link1": "",
+            "cta_text2": "Shop All",
+            "cta_link2": "",
+            "video_url": "",
+            "width": "100",
+            "height": 500,
+            "text_size": 120,
+            "text_align": "vertical-center horizontal-center",
+            "focal_point": "center",
+            "color_accent": "rgba(0,0,0,0)",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner",
+        "advanced"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "collection_description": {
+          "type": "collection_description",
+          "disabled": true,
+          "settings": {}
+        },
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": false,
+            "per_row": 4,
+            "rows_per_page": 20,
+            "mobile_flush_grid": true
+          }
+        }
+      },
+      "block_order": [
+        "collection_description",
+        "subcollections",
+        "product_grid"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": false,
+        "filter_style": "drawer",
+        "enable_color_swatches": true,
+        "enable_sort": true
+      }
+    },
+    "16590760059a312fef": {
+      "type": "newsletter",
+      "blocks": {
+        "1659076005fbc85526-0": {
+          "type": "title",
+          "settings": {
+            "title": "Anmelden und 10% Sparen"
+          }
+        },
+        "1659076005fbc85526-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Melde dich bei unserem Newsletter an und profitiere von exklusiven Angeboten, Giveaways, einmaligen Deals und 10% Rabatt auf deine erste Bestellung.<\/p>"
+          }
+        },
+        "1659076005fbc85526-2": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "1659076005fbc85526-0",
+        "1659076005fbc85526-1",
+        "1659076005fbc85526-2"
+      ],
+      "settings": {
+        "color_background": "#e0f5ff",
+        "color_text": "#1c1d1d"
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "promo-grid",
+    "main-collection",
+    "16590760059a312fef"
+  ]
+}

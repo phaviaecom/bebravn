@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "16587588508244d917": {
+      "type": "faq",
+      "blocks": {
+        "16587588502da8bb65-0": {
+          "type": "question",
+          "settings": {
+            "title": "Wie kann ich meine Artikel zurückschicken?",
+            "text": "<p>Es kann natürlich vorkommen, dass du einen Artikel doch lieber in einer anderen Variante oder mit anderen Präferenzen hättest. Das ist kein Problem. Melde uns einfach die Retoure über unser Retouren-Portal mit dem entsprechenden Artikel an. <br\/>Um die Retoure anzumelden, benötigst du deine Bestellnummer (diese findest du in der Bestellbestätigung oder Rechnung, die du von uns per E-Mail erhalten hast) und deine E-Mail Adresse. Wähle den jeweiligen Artikel, den du zurücksenden möchtest sowie die Anzahl der Artikel aus und gib bitte den Grund für deine Retoure an. Wir prüfen und bestätigen daraufhin deine Retouren-Ankündigung und du erhältst von uns alle notwendigen Unterlagen.<\/p><p><\/p><p>Sobald deine Rücksendung bei uns eingegangen ist, erhältst du per E-Mail eine Bestätigung über den Eingang der Retoure. Nach Prüfung der Retoure wird der entsprechende Betrag zurückerstattet - gemäß der von dir gewählten Zahlungsart. Die Bearbeitung und Rückerstattung kann bis zu 7 Tage dauern. Schau dir für weitere Informationen unsere <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">Widerrufsbelehrung<\/a> an. <strong>Bitte beachte, dass die unmittelbaren Kosten der Rücksendung der Waren von dir zu tragen sind.<\/strong><\/p><p><\/p><p>Du hast die Möglichkeit, Deine Bestellung binnen 14 Tagen nach Erhalt der vollständigen Sendung zu widerrufen. Um Deine Rücksendung schnell bearbeiten zu können, bitten wir Dich, diese über unser Retouren-Portal anzumelden.<br\/><br\/> In wenigen Fällen kann es natürlich auch mal vorkommen, das bei uns in der Logistik sich ein Fehler eingeschlichen hat. Auch das kannst du im Retouren-Portal entsprechend melden. Wir werden dann den Grund prüfen und uns bei dir melden.<\/p>"
+          }
+        },
+        "16587588502da8bb65-1": {
+          "type": "question",
+          "settings": {
+            "title": "Ein Artikel ist beschädigt oder ein falscher Artikel wurde geliefert?",
+            "text": "<p>Melde bitte den Defekt oder den falsch gelieferten Artikel ebenfalls über das Portal an und lade ein Bild des Defekts hoch. Wir prüfen den Fall anhand des Bildes und nehmen dann mit dir Kontakt auf, wie der weitere Ablauf in diesem sehr seltenen Fall ist. Falls du einen Umtausch bzw. Austausch möchtest, kannst du das gerne direkt auswählen.<\/p>"
+          }
+        },
+        "efcad4aa-63d8-4ca5-9b93-4776fd0270b0": {
+          "type": "question",
+          "settings": {
+            "title": "Was muss ich beim Versenden einer Retoure beachten?",
+            "text": "<p>Bitte versende die Artikel möglichst originalverpackt. Um deine Retoure schnellstmöglich bearbeiten zu können, bitten wir dich den Retourenschein beizulegen. Unfrei verschickte Pakete (Pakete, die nicht frankiert sind) können von BRAVN nicht angenommen werden und gehen zu deinen Lasten an dich zurück. Wichtig: Hebe den Einlieferungsbeleg des Versenders bis zur Erstattung des Kaufpreises auf. Bei Reklamationen oder Unstimmigkeiten wende dich bitte sofort an unseren Kundenservice per E-Mail unter <a href=\"mailto:info@bravn.com\" title=\"mailto:info@bravn.com\">info@bravn.com<br\/><\/a> Hierbei handelt es sich lediglich um Empfehlungen unsererseits, dein gesetzliches Widerrufsrecht wird hierdurch nicht berührt.<\/p>"
+          }
+        },
+        "f3c0d99b-db93-45d3-815d-376da96a3e65": {
+          "type": "question",
+          "settings": {
+            "title": "Gibt es Rücksendekosten?",
+            "text": "<p>Wenn mit Deinen gelieferten Artikeln alles in Ordnung war, dürfen wir uns das Recht vorbehalten, die regelmäßigen Kosten der Rücksendung vom Erstattungsbetrag einzubehalten.  Handelt es sich bei der Retoure um Falschlieferungen oder fehlerhafte Artikel, so trägt BRAVN die Kosten für die Rücksendung.<\/p>"
+          }
+        },
+        "77d4e53e-d3c8-4a0e-8d39-456a155fcf63": {
+          "type": "question",
+          "settings": {
+            "title": "Welcher Versanddienstleister kann gewählt werden?",
+            "text": "<p>Am einfachsten ist die Rücksendung über unser DHL, DPD oder GLS  Rücksendeetikett. Dieses wird Dir nach Anmeldung der Retoure zur Verfügung gestellt. Die Rücksendekosten werden vom Erstattungsbetrag einbehalten.<\/p>"
+          }
+        },
+        "065ac7c3-aebb-4ccd-a699-5d67bf8e14d9": {
+          "type": "question",
+          "settings": {
+            "title": "Ich habe bei meiner Bestellung kein Kundenkonto angelegt. Wie kann ich Retouren bei Gastbestellungen beantragen?",
+            "text": "<p>Auch bei Gastbestellungen kannst du unsere Retouren-Portal verwenden. Auch dazu benötigst du nur deine Bestellnummer (diese findest du in der Bestellbestätigung oder Rechnung, die du von uns per E-Mail erhalten hast) und deine E-Mail.<\/p>"
+          }
+        },
+        "3458e2c8-6cf7-4fd2-8a47-28eb759fa773": {
+          "type": "question",
+          "settings": {
+            "title": "Wie soll ich die Produkte verpacken?",
+            "text": "<p>Bitte verwende den Originalkarton, um die Ware vollständig, originalverpackt und in ungebrauchtem und unbeschädigtem Zustand an uns zurückzusenden. Verpacke die Sendung zusammen mit dem ausgefüllten Retourenschein im Paket.<\/p>"
+          }
+        },
+        "8e0562a4-b508-406f-9363-6ec930e694d1": {
+          "type": "question",
+          "settings": {
+            "title": "Was kann ich nicht zurücksenden?",
+            "text": "<p>Bitte achte darauf, dass alle retournierten Artikel in ihrem Originalzustand sind und in der Originalverpackung an uns zurückgesendet werden, inkl. Etikett. Natürlich ist es okay, einen Artikel wie auch in einem Geschäft anzuprobieren, aber bitte trage Artikel, die du zurücksenden willst, nicht. Unsere Gutscheinkarten sind selbstverständlich vom Umtausch ausgeschlossen.<\/p>"
+          }
+        },
+        "5e827501-60e0-4ae0-a860-2d80cbe0eb8d": {
+          "type": "question",
+          "settings": {
+            "title": "Wann und für wen gilt das Rückgaberecht?",
+            "text": "<p>Das Rückgaberecht gilt nur für Endkunden und nicht für gewerbliche Kunden. Vom Rückgaberecht ausgeschlossen sind Artikel die gebraucht oder beschädigt wurden. Mehr Informationen findest du in unseren <a href=\"\/policies\/terms-of-service\" title=\"Terms of Service\">AGB´s.<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "16587588502da8bb65-0",
+        "16587588502da8bb65-1",
+        "efcad4aa-63d8-4ca5-9b93-4776fd0270b0",
+        "f3c0d99b-db93-45d3-815d-376da96a3e65",
+        "77d4e53e-d3c8-4a0e-8d39-456a155fcf63",
+        "065ac7c3-aebb-4ccd-a699-5d67bf8e14d9",
+        "3458e2c8-6cf7-4fd2-8a47-28eb759fa773",
+        "8e0562a4-b508-406f-9363-6ec930e694d1",
+        "5e827501-60e0-4ae0-a860-2d80cbe0eb8d"
+      ],
+      "settings": {
+        "title": "FAQ zu Retouren"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16587588508244d917"
+  ]
+}

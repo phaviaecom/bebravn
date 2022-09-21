@@ -1,0 +1,272 @@
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slideshow-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "BE YOU...\n#BEBRAVN",
+            "title_size": 80,
+            "subheading": "Sportswear mit California-Feeling.",
+            "link": "shopify:\/\/collections\/men",
+            "link_text": "Herren",
+            "link_2": "shopify:\/\/collections\/women",
+            "link_text_2": "Damen",
+            "color_accent": "#1e4274",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify:\/\/shop_images\/AdobeStock_176197889.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        },
+        "slideshow-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "BE YOU...\n#BEBRAVN",
+            "title_size": 80,
+            "subheading": "Sportswear mit California-Feeling.",
+            "link": "shopify:\/\/collections\/men",
+            "link_text": "Herren",
+            "link_2": "shopify:\/\/collections\/men",
+            "link_text_2": "Damen",
+            "color_accent": "#1e4274",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify:\/\/shop_images\/AdobeStock_145543654.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        },
+        "1e7f3dfa-8813-4467-80cd-6a74a7575b05": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "BE YOU...\n#BEBRAVN",
+            "title_size": 80,
+            "subheading": "Sportswear mit California-Feeling.",
+            "link": "shopify:\/\/collections\/kids",
+            "link_text": "Kinder",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "#1e4274",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify:\/\/shop_images\/pexels-tuan-kiet-jr-1549973-3840x2560.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "bottom center"
+          }
+        }
+      },
+      "block_order": [
+        "slideshow-0",
+        "slideshow-1",
+        "1e7f3dfa-8813-4467-80cd-6a74a7575b05"
+      ],
+      "settings": {
+        "section_height": "100vh",
+        "mobile_height": "500px",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 9
+      }
+    },
+    "16576107108b5374cc": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Kollektion entdecken",
+        "home_featured_products": "clothes",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "1657610803a1f0a334": {
+      "type": "slideshow",
+      "blocks": {
+        "1657610803f41412f9-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Entdecke",
+            "title": "Schuhe",
+            "title_size": 80,
+            "subheading": "Catch the sunset",
+            "link": "shopify:\/\/collections\/shoes-men",
+            "link_text": "Herren",
+            "link_2": "shopify:\/\/collections\/shoes-women",
+            "link_text_2": "Damen",
+            "color_accent": "#1e4274",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify:\/\/shop_images\/pexels-sebastian-voortman-988914.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "20% 100%"
+          }
+        },
+        "1657610803f41412f9-1": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "Entdecke",
+            "title": "Schuhe",
+            "title_size": 80,
+            "subheading": "Catch the sunset",
+            "link": "shopify:\/\/collections\/shoes-men",
+            "link_text": "Herren",
+            "link_2": "shopify:\/\/collections\/shoes-women",
+            "link_text_2": "Damen",
+            "color_accent": "#1e4274",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify:\/\/shop_images\/pexels-chris-kim-creatives-9272796-3840-1776.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "top center"
+          }
+        }
+      },
+      "block_order": [
+        "1657610803f41412f9-0",
+        "1657610803f41412f9-1"
+      ],
+      "settings": {
+        "section_height": "100vh",
+        "mobile_height": "500px",
+        "parallax": false,
+        "style": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 9
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Kollektion entdecken",
+        "home_featured_products": "men",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "promo-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "Entdecke",
+            "heading": "Accessoires",
+            "textarea": "Verleihe Deinem Look den letzten Schliff.",
+            "cta_text1": "Herren",
+            "cta_link1": "shopify:\/\/collections\/accessoires-men",
+            "cta_text2": "Damen",
+            "cta_link2": "shopify:\/\/collections\/accessoires-women",
+            "image": "shopify:\/\/shop_images\/pexels-roberto-nickson-2531236-3650x5475.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 800,
+            "text_size": 120,
+            "text_align": "vertical-top horizontal-left",
+            "focal_point": "center",
+            "color_accent": "#1e4274",
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "3b902b3f-5e13-43a9-9aa6-0e9252e066a7": {
+          "type": "sale_collection",
+          "disabled": true,
+          "settings": {
+            "sale_collection": "sale",
+            "top_text": "Bis zu",
+            "middle_text": "50%",
+            "bottom_text": "Ausgewählte Produkte",
+            "width": "50",
+            "color_tint": "#1e4274",
+            "color_tint_opacity": 0,
+            "boxed": false,
+            "framed": false
+          }
+        },
+        "1fc4e94a-333c-4e6c-8d43-a80105a37bbf": {
+          "type": "sale_collection",
+          "disabled": true,
+          "settings": {
+            "sale_collection": "sale",
+            "top_text": "Bis zu",
+            "middle_text": "50%",
+            "bottom_text": "Ausgewählte Produkte",
+            "width": "50",
+            "color_tint": "#1e4274",
+            "color_tint_opacity": 0,
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "promo-0",
+        "3b902b3f-5e13-43a9-9aa6-0e9252e066a7",
+        "1fc4e94a-333c-4e6c-8d43-a80105a37bbf"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 30,
+        "space_above": false,
+        "space_below": false
+      }
+    },
+    "16634010833a16489b": {
+      "type": "featured-collection-slider",
+      "settings": {
+        "title": "Featured collection",
+        "home_featured_products": "men",
+        "view_all": true,
+        "divider": false
+      }
+    },
+    "background-image-text": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "Im Blick",
+        "title": "California Mode",
+        "text": "<p>Dieses ausgelassene Lebensgefühl von Freiheit und Inspiration: BRAVN bringt Dir genau das ganz nah...  Entdecke unsere mit Vitamin-D angereicherten Styles für einen aktiven Alltag und Deine intensivsten Momente. <\/p>",
+        "button_label": "Kollektionen Anzeigen",
+        "button_link": "shopify:\/\/collections\/all",
+        "image": "shopify:\/\/shop_images\/pexels-ian-beckley-2440011-3840x3800.jpg",
+        "focal_point": "top",
+        "layout": "left",
+        "height": 750,
+        "framed": false,
+        "parallax": true
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "From the journal",
+        "blog": "neuheiten",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "portrait",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "16576107108b5374cc",
+    "1657610803a1f0a334",
+    "featured-collection",
+    "promo-grid",
+    "16634010833a16489b",
+    "background-image-text",
+    "blog-posts"
+  ]
+}

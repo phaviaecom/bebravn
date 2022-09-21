@@ -49,6 +49,15 @@ Arguments
   endif
 -%}
 
+{%- if product.metafields.custom.alternative_products.value -%}
+  {%- for alt_product in product.metafields.custom.alternative_products.value -%}
+    {%- if alt_product.available -%}
+    <a href="{{ alt_product.url }}" title="{{ alt_product.title }}">
+      <img src="{{ alt_product.featured_image | img_url: '90x90', crop: 'center', format: 'pjpg' }}" alt="{{ alt_product.title }}" loading="lazy"></a>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
 <div class="grid__item grid-product {{ grid_item_width }}{% if quick_shop_enable %} grid-product__has-quick-shop{% endif %}" data-aos="row-of-{{ per_row }}" data-product-handle="{{ product.handle }}" data-product-id="{{ product.id }}">
   <div class="grid-product__content">
     {%- if has_custom_label -%}

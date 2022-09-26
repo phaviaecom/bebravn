@@ -1,0 +1,22 @@
+.grid-product__variants .list-variants{
+	padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-start;
+}
+.grid-product__variants .list-variants li{
+	list-style-type: none;
+	margin-right: 5px;
+}
+.grid-product__variants .list-variants li a{
+	position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    -webkit-appearance: none !important;
+    background-color: inherit;
+    overflow: visible;
+    max-width: 40px;
+    width: 100%;
+	cursor: pointer;
+}

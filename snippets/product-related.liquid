@@ -11,7 +11,7 @@
 		{%- for alt_product in product.metafields.custom.alternative_products.value -%}
 			{%- if alt_product.available -%}
 			<li class="single_swatch-item {% if product.id == alt_product.id %}is-selected{% endif %}">
-				<a href="{{ alt_product.handle | handle }}" alt="{{ alt_product.title }}">
+				<a href="/products/{{ alt_product.handle }}" alt="{{ alt_product.title }}">
 					<img src="{{ alt_product.featured_image | img_url: 'master' }}" alt="{{ alt_product.title }}" loading="lazy">
 				</a>
 				</li>

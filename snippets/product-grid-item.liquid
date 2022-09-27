@@ -78,7 +78,7 @@ Arguments
       assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
     -%}
 
-    <a href="{{ product.url | within: collection }}" class="grid-product__link">
+    <a href="{{ product.url | within: collection }}" class="grid-product__link product-link-{{ product.id }}">
       <div class="grid-product__image-mask">
         {%- if quick_shop_enable -%}
           <div class="quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide">
@@ -93,7 +93,9 @@ Arguments
               data-widths="[360, 540, 720, 900, 1080]"
               data-aspectratio="{{ preview_image.aspect_ratio }}"
               data-sizes="auto"
-              alt="{{ preview_image.alt | escape }}">
+              alt="{{ preview_image.alt | escape }}"
+              id="feature-img-{{ product.id }}"
+              >
           </div>
         {%- else -%}
           <div class="image-wrap"
@@ -104,6 +106,7 @@ Arguments
                 data-widths="[360, 540, 720, 900, 1080]"
                 data-aspectratio="{{ preview_image.aspect_ratio }}"
                 data-sizes="auto"
+                id="feature-img-{{ product.id }}"
                 alt="{{ preview_image.alt | escape }}">
             <noscript>
               <img class="grid-product__image lazyloaded"
@@ -137,6 +140,7 @@ Arguments
                 data-widths="[360, 540, 720, 1000]"
                 data-aspectratio="{{ second_image.aspect_ratio }}"
                 data-sizes="auto"
+                id="second-img-{{ product.id }}"
                 alt="{{ second_image.alt }}">
           </div>
         {%- endif -%}
@@ -175,21 +179,26 @@ Arguments
         {%- endif -%}
       </div>
     </a>
+<!-- Start - Adjust code regardring to change image  -->
       {% if product.variants.size > 0 %}
         <div class="grid-product__variants">
           <p class="grid-product__variants-count"> {{ product.variants.size }} Variants </p>
 
           {%- if product.metafields.custom.alternative_products.value -%}
-              <ul id="list_variants" class="list-variants">
+              <ul id="list_variants-{{product.id}}" class="list-variants">
                 {%- for alt_product in product.metafields.custom.alternative_products.value -%}
-                  {%- if alt_product.available and forloop.length > 1 -%}
+                  {%- if alt_product.available -%}
                     <li class="swatch-item {% if product.id == alt_product.id %}is-selected{% endif %}">
-                        <a data-id="{{ alt_product.id }}" data-feature="{{ alt_product.featured_image | img_url: 'master' }}" data-handle="{{ alt_product.url | handle }}" title="{{ alt_product.title }}">
-                        <img src="{{ alt_product.featured_image | img_url: '90x90', crop: 'center' }}" alt="{{ alt_product.title }}" loading="lazy"></a>
-                        {% if alt_product.images.size > 1 %}
-                          <input type="hidden" name="{{ alt_product.id }}_feature-image" value="{{ alt_product.images[0].src | img_url: 'master' }}" />
-                          <input type="hidden" name="{{ alt_product.id }}_hover-image" value="{{ alt_product.images[1].src | img_url: 'master' }}" />
+                        <a data-id="{{ product.id }}" 
+                        data-variants="{{ alt_product.id }}" 
+                        data-handle="{{ alt_product.handle | handle }}" title="{{ alt_product.title }}"
+                        {% if alt_product.images.size > 1  %}
+                        data-featured="{{ alt_product.images[0].src | img_url: 'master' }}" 
+                        data-second="{{ alt_product.images[1].src | img_url: 'master' }}"
                         {% endif %}
+                        >
+                          <img src="{{ alt_product.featured_image | img_url: '90x90', crop: 'center' }}" alt="{{ alt_product.title }}" loading="lazy">
+                        </a>
                       </li>
                   {%- endif -%}
                 {%- endfor -%}
@@ -197,9 +206,11 @@ Arguments
           {%- endif -%} 
         </div>
       {% endif %}
-
+<!-- End - Adjust code regardring to change image  -->
       <div class="grid-product__meta">
-        <div class="grid-product__title grid-product__title--{{ settings.type_product_style }}">{{ product.title }}</div>
+        <div class="grid-product__title grid-product__title--{{ settings.type_product_style }}">
+          <a href="{{ product.url | within: collection }}" class="grid-product__link product-link-{{ product.id }}">{{ product.title }}</a>
+        </div>
         {%- if settings.vendor_enable -%}
           <div class="grid-product__vendor">{{ product.vendor }}</div>
         {%- endif -%}

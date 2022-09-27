@@ -3481,6 +3481,10 @@
           "info": "Supports Liquid"
         }
       }
+    },
+    "product_related":{
+       "name": "Product related",
+       "label": "Product related"
     }
   }
 }

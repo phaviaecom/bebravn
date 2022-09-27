@@ -388,6 +388,10 @@
                     <div class="product-block" {{ block.shopify_attributes }}>
                       {{ block.settings.code }}
                     </div>
+                  {%- when 'product_related' -%} 
+                      {% if block.settings.show_dynamic_product_related %} 
+                          {% render 'product-related', product: product, block: block %}
+                      {% endif %}
                 {%- endcase -%}
               {%- else -%}
                 <div data-blocks-holder

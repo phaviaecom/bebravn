@@ -1,0 +1,23 @@
+{% if product.variants.size > 0 %}
+<div class="single-product__variants">
+	<h3 class="single-product__variants-count"> {{ block.settings.title_related }}
+		   <span class="color_name-{{ product.id }} tag-color" >
+			    {{ product.variants.first.option2 }}
+		   </span>
+	</h3>	
+
+	{%- if product.metafields.custom.alternative_products.value -%}
+		<ul id="list_single-variants-{{product.id}}" class="single_list-variants">
+		{%- for alt_product in product.metafields.custom.alternative_products.value -%}
+			{%- if alt_product.available -%}
+			<li class="single_swatch-item {% if product.id == alt_product.id %}is-selected{% endif %}">
+				<a href="{{ alt_product.handle | handle }}" alt="{{ alt_product.title }}">
+					<img src="{{ alt_product.featured_image | img_url: 'master' }}" alt="{{ alt_product.title }}" loading="lazy">
+				</a>
+				</li>
+			{%- endif -%}
+		{%- endfor -%}
+	</ul>
+	{%- endif -%} 
+</div>
+{% endif %}

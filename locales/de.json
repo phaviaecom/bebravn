@@ -394,5 +394,11 @@
         "address1_label": "Straße oder Packstation Nr. (Beispiel: Packstation 150)"
       }
     }
+  },
+  "product_block": {
+    "product_related": {
+      "name": "Product related",
+      "label": "FARBE"
+   }
   }
 }

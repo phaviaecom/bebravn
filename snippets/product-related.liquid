@@ -1,8 +1,8 @@
 {% if product.variants.size > 0 %}
 <div class="single-product__variants">
-	<h3 class="single-product__variants-count"> {{ block.settings.title_related }}
+	<h3 class="single-product__variants-count"> {{ "product_block.product_related.label" | t }}
 		   <span class="color_name-{{ product.id }} tag-color" >
-			    {{ product.variants.first.option2 }}
+			— {{ product.variants.first.option2 }}
 		   </span>
 	</h3>	
 

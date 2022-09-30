@@ -380,5 +380,11 @@
       "send_to_customer_service": "Send to customer service",
       "add_all_to_cart": "Add wishlist to cart"
     }
+  },
+  "product_block": {
+    "product_related": {
+      "name": "Product related",
+      "label": "COULEUR"
+   }
   }
 }

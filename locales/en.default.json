@@ -394,5 +394,11 @@
         "address1_label": "Street"
       }
     }
+  },
+  "product_block": {
+    "product_related": {
+      "name": "Product related",
+      "label": "Color"
+   }
   }
 }

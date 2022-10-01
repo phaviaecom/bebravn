@@ -1,5 +1,5 @@
 <div class="variant-wrapper variant-wrapper--dropdown js" data-type="dropdown">
-  <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
+  <label class="variant__label{% if option.name == 'Default' or option.name == 'Title' or option.position == 1 or option.position == 2 %} hidden-label{% endif %}{% unless variant_labels %} hidden-label{% endunless %}"
     for="SingleOptionSelector-{{ section_id }}-{{ product.id }}-option-{{ forloop.index0 }}">
     {{ option.name }}
   </label>

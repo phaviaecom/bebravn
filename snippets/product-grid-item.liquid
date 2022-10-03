@@ -201,6 +201,8 @@ Arguments
                         {% if alt_product.images.size > 1  %}
                         data-featured="{{ alt_product.images[0].src | img_url: 'master' }}" 
                         data-second="{{ alt_product.images[1].src | img_url: 'master' }}"
+                        {% else %}
+                        data-featured="{{ alt_product.images[0].src | img_url: 'master' }}"
                         {% endif %}
                         >
                           <img src="{{ alt_product.featured_image | img_url: '90x90', crop: 'center' }}" alt="{{ alt_product.title }}" loading="lazy">

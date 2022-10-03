@@ -30,7 +30,7 @@ $(document).ready(() => {
 		let setTime = setInterval(() => {
 			$('.list-variants .swatch-item').each( (idx, el) => {
 					$(el).find('a').on('click', (e) => {
-						console.log(e.currentTarget);
+		
 						let productId  = e.currentTarget.dataset.id;
 						let featureImg = e.currentTarget.dataset.featured;
 						let secondImg  = e.currentTarget.dataset.second;
@@ -60,7 +60,7 @@ $(document).ready(() => {
 		let setTime = setInterval(() => {
 			$('.list-variants .swatch-item').each( (idx, el) => {
 					$(el).find('a').on('click', (e) => {
-						console.log(e.currentTarget);
+						
 						let productId  = e.currentTarget.dataset.id;
 						let featureImg = e.currentTarget.dataset.featured;
 						let secondImg  = e.currentTarget.dataset.second;

@@ -188,7 +188,13 @@ Arguments
           {%- endfor -%}
         {%- endif -%} 
         <div class="grid-product__variants">   
-          <p class="grid-product__variants-count"> {{ number }} {{ "products.product.colors_plural" | t }}<iconify-icon icon="entypo:chevron-down" width="20" height="14"></iconify-icon> </p>
+          <p class="grid-product__variants-count"> 
+            {% if number == 1 %}
+              {{ number }} {{ "products.product.colors_singular" | t }}
+            {% else %} 
+              {{ number }} {{ "products.product.colors_plural" | t }}
+            {% endif %}
+          <iconify-icon icon="entypo:chevron-down" width="20" height="14"></iconify-icon> </p>
           <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
           {%- if product.metafields.custom.alternative_products.value -%}
               <ul id="list_variants-{{product.id}}" class="list-variants">

@@ -61,7 +61,9 @@
         data-value="{{ value | escape }}">
         <input type="radio"
           form="{{ form_id }}"
+          {% unless option.name == 'Size' or option.name == 'Größe' or option.name == 'Talla' or option.name == 'Taille' or option.name == 'taglia' %}
           {% if option.selected_value == value %} checked="checked"{% endif %}
+          {% endunless %}
           value="{{ value | escape }}"
           data-index="option{{ option_index }}"
           name="{{ option.name }}"

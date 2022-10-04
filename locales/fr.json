@@ -315,6 +315,8 @@
       "unavailable": "Non disponible",
       "quantity": "Quantité",
       "add_to_cart": "Ajouter au panier",
+      "size_mandatory": "Veuillez sélectionner",
+      "size_mandatory_error": "Veuillez sélectionner votre taille pour ajouter l'article au panier",
       "preorder": "Pré-commander",
       "include_taxes": "Taxes incluses.",
       "shipping_policy_html": "<a href='{{ link }}'>Frais d'expédition<\/a> calculés lors du passage à la caisse.",
@@ -322,7 +324,9 @@
       "will_be_in_stock_after": "Sera en stock à compter de {{ date }}",
       "waiting_for_stock": "Inventaire sur le chemin",
       "view_in_space": "Afficher dans votre espace",
-      "view_in_space_label": "Affichage dans votre espace, charge l'article dans une fenêtre de réalité augmentée"
+      "view_in_space_label": "Affichage dans votre espace, charge l'article dans une fenêtre de réalité augmentée",
+      "colors_singular": "Couleur",
+      "colors_plural": "Couleurs"
     }
   },
   "store_availability": {
@@ -385,6 +389,6 @@
     "product_related": {
       "name": "Product related",
       "label": "COULEUR"
-   }
+    }
   }
 }

@@ -3,15 +3,18 @@
     justify-content: flex-start;
     align-content: space-around;
     align-items: center;
-    min-height: 44px;
+    min-height: 74px;
     margin-top: 10px;
+    margin-bottom: -5px;
     cursor: pointer;
+    flex-wrap: wrap;
 }
 .grid-product__variants:hover .list-variants{
     opacity: 1;
     visibility: visible;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .grid-product__variants .list-variants{
 	padding: 0px;
@@ -22,7 +25,7 @@
 }
 .grid-product__variants .list-variants li{
 	list-style-type: none;
-	margin-right: 5px;
+	margin-right: 6px;
 }
 .grid-product__variants .list-variants li a{
 	position: relative;
@@ -32,41 +35,90 @@
     -webkit-appearance: none !important;
     background-color: inherit;
     overflow: visible;
-    max-width: 40px;
+    max-width: 70px;
     width: 100%;
 	cursor: pointer;
 }
-.grid-product__variants .list-variants li.is-selected{
-    border: 1px solid #000000;
+
+.grid-product__variants .list-variants li.is-selected img{
+    outline: 1.5px solid #000000;
 }
-.grid-product__variants .list-variants li.is-selected a{
-    max-width: calc(40px - 2px);
-}
+
+@media (min-width:768px){
+.grid-product__variants .list-variants li:hover{
+    outline: 1.0px solid darkgrey;  
+}}
+
 .grid-product__variants-count{
     margin: 0px;
     flex-basis: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 .grid-product__variants:hover .grid-product__variants-count{
     display: none;
     visibility: hidden;
 }
 
+@media (max-width:768px){
+.grid-product__variants {
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-around;
+    align-items: center;
+    min-height: 42px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    cursor: pointer;
+}
+
+.grid-product__variants .list-variants li a{
+	max-width: 38px;
+}
+.grid-product__variants .list-variants li.is-selected{
+    border: 1.0px solid #000000;
+}
+.grid-product__variants .list-variants li.is-selected a{
+    max-width: calc(38px - 2px);
+}
+.grid-product__variants-count{
+    padding-left: 10px;
+    margin: 0px;
+    flex-basis: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}}
+
 /* Single Product */
 .single_list-variants{
     list-style-type: none;
     margin: 0px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     align-content: center;
 }
+
 .single_list-variants .single_swatch-item{
     max-width: 90px;
     width: 100%;
     margin-right: 7px;
 }
+
+@media (min-width:768px){
+.single_list-variants .single_swatch-item img:hover{
+    outline: 1.0px solid darkgrey;
+}}
+
 .single_list-variants .single_swatch-item.is-selected img{
-    border: 1px solid #000000;
+    outline: 2.5px solid #000000;
 }
 .single-product__variants-count{
     text-transform: uppercase;
@@ -78,5 +130,23 @@
 .tag-color{
     text-transform: none;
     font-weight: 400;
-    letter-spacing: 0;
+    font-size: 1.1em;
+    letter-spacing: 0.2em;
+    font-weight: var(--typeBaseWeight);
 }
+
+@media (max-width:768px){
+.single_list-variants{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single_list-variants .single_swatch-item{
+    max-width: 75px;
+    width: 100%;
+    margin-right: 6px;
+}
+.single_list-variants .single_swatch-item.is-selected img{
+    outline: 2.0px solid #000000;
+}}

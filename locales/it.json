@@ -318,6 +318,8 @@
       "unavailable": "Non disponibile",
       "quantity": "Quantità",
       "add_to_cart": "Aggiungi al carrello",
+      "size_mandatory": "Si prega di selezionare",
+      "size_mandatory_error": "Seleziona la tua taglia per aggiungere l'articolo al carrello",
       "preorder": "Pre-ordine",
       "include_taxes": "Imposte incluse.",
       "shipping_policy_html": "<a href='{{ link }}'>Spedizione<\/a> calcolata alla cassa.",
@@ -325,7 +327,9 @@
       "will_be_in_stock_after": "Di nuovo in magazzino {{ date }}",
       "waiting_for_stock": "Inventario in arrivo",
       "view_in_space": "Visualizza nel tuo spazio",
-      "view_in_space_label": "Visualizza nel tuo spazio, carica l'articolo nella finestra della realtà aumentata"
+      "view_in_space_label": "Visualizza nel tuo spazio, carica l'articolo nella finestra della realtà aumentata",
+      "colors_singular": "Colore",
+      "colors_plural": "Colori"
     }
   },
   "store_availability": {

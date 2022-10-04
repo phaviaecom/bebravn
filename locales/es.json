@@ -315,6 +315,8 @@
       "unavailable": "No disponible",
       "quantity": "Cantidad",
       "add_to_cart": "Agregar al carrito",
+      "size_mandatory": "Por favor seleccione",
+      "size_mandatory_error": "Selecciona tu talla para añadir el artículo al carrito de la compra",
       "preorder": "Hacer un pedido",
       "include_taxes": "Impuesto incluido.",
       "shipping_policy_html": "Los <a href='{{ link }}'>gastos de envío<\/a> se calculan en la pantalla de pagos.",
@@ -322,7 +324,9 @@
       "will_be_in_stock_after": "Estará disponible después {{ date }}",
       "waiting_for_stock": "Inventario en el camino",
       "view_in_space": "Ver en tu espacio",
-      "view_in_space_label": "Ver en tu espacio, carga el artículo en la ventana de realidad aumentada"
+      "view_in_space_label": "Ver en tu espacio, carga el artículo en la ventana de realidad aumentada",
+      "colors_singular": "Color",
+      "colors_plural": "Colores"
     }
   },
   "store_availability": {
@@ -385,6 +389,6 @@
     "product_related": {
       "name": "Product related",
       "label": "FARBE"
-   }
+    }
   }
 }

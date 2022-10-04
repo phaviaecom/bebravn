@@ -12009,7 +12009,11 @@ color: #000000 !important;
 }
 
 .hc-size-mandatory {
-  color: #d02e2e;
+  color: #1E4274 !important;
+}
+
+.errors, .note {
+  margin-top: 5px;
 }
 
 .product-single__form .add-to-cart {
@@ -12034,36 +12038,135 @@ color: #000000 !important;
 }
 
 /* BRAVN - Add to Wishlist adjustments - 17 September '22 */
-@media screen and (max-width:365px){ .frcp-wishlist-btn__text { 
+@media screen and (max-width:768px){ .frcp-wishlist-btn__text { 
   font-size: 11px;
   letter-spacing: 0.3em;
   } }
 
-@media screen and (max-width:365px){ .frcp-wishlist-icon { 
+@media screen and (max-width:768px){ .frcp-wishlist-icon { 
   height: 15px !important;
   width: 15px !important;
 } }
 
-@media screen and (max-width:365px){ .frcp-wishlist-wrapper { 
+@media screen and (max-width:768px){ .frcp-wishlist-wrapper { 
   height: 45px !important;
   } }
 
-.frcp-wishlist-grid-btn{ 
+@media screen and (max-width: 768px){ .frcp-wishlist-grid-btn { 
   color: black !important;
   background: transparent !important;
-  border: transparent !important;
-}
+  border: lightgrey !important;
+  border-style: solid !important;
+  border-width: 1.0px !important;
+} }
+
+@media screen and (min-width: 768px){ .frcp-wishlist-grid-btn { 
+  color: black !important;
+  background: transparent !important;
+  border: lightgrey !important;
+  border-style: solid !important;
+  border-width: 1.5px !important;
+} }
 
 .frcp-wishlist-btn--remove{
   color: white !important;
   background: #FF4E4E !important;
   border: #FF4E4E !important;
+  border-style: solid !important;
+  border-width: 1.5px !important;
 }
 
 .frcp-login__login{
   background: #1E4274 !important;
   border: #1E4274 !important;
   color: white !important;
+  border-radius: 3px;
+  text-transform: uppercase !important;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+}
+
+.frcp-login__cancel{
+  border-radius: 3px;
+  text-transform: uppercase !important;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+}
+
+.frcp-btn{ 
+  background: #1E4274 !important;
+  border-radius: 3px;
+  text-transform: uppercase !important;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+}
+
+.frcp-btn--primary {
+  border-radius: 3px;
+  text-transform: uppercase !important;
+  font-size: 13px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+}
+
+.frcp-btn__text{
+  text-transform: uppercase !important;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+}
+
+.frcp-form__secondary-btn{
+  text-transform: uppercase !important;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  border-radius: 3px;
+}
+
+.frcp-btn--secondary {
+  background: #e5e5e5 !important;
+  text-transform: uppercase !important;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  font-weight: 600;
+  border-radius: 3px;
+  color: #545454 !important;
+}
+
+.frcp-login__title{
+  letter-spacing: 0.1em;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+.frcp-address__default {
+  border-radius: 3px;
+  background-color: black !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em;
+}
+
+.frcp-btn--icon-left {
+  background-color: white !important;
+}
+
+.frcp-wishlist__share {
+  border-radius: 3px !important;
+}
+
+.frcp-product__add-to-cart {
+  border-radius: 3px !important;
+}
+
+.frcp-section__title {
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em;
+  font-weight: 600 !important;
+  font-size: 16px !important;
 }
 
 /* BRAVN - Adjustments media screen - 19 September '22 */
@@ -12134,4 +12237,13 @@ color: #000000 !important;
 #shopify-section-collection-template  .content-wrapper {
     width: 96%;
     margin: 0 auto;
+}
+}
+
+.variant-input-wrap[data-index=option1] {
+    display: none !important;
+}
+
+.variant-input-wrap[data-index=option2] {
+    display: none !important;
 }

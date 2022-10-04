@@ -1,3 +1,4 @@
+<!--product-form.liquid------>
 {%- form 'product', product, id: form_id, class: 'product-single__form' -%}
 
   {%- liquid
@@ -42,23 +43,26 @@
     </div>
   {%- endif -%}
 
+  <!-- HC - Error message - 09 September '22 -->
+  <div class="hc-error errors" style="display: none;">{{ 'products.product.size_mandatory_error' | t }}</div>
+
   <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
 
-  <select name="id" data-product-select class="product-single__variants no-js">
-    {%- for variant in product.variants -%}
-      {%- if variant.available -%}
-        <option {% if variant == product.selected_or_first_available_variant %}
-          selected="selected"{% endif %}
-          value="{{ variant.id }}">
-          {{ variant.title }} - {{ variant.price | money_with_currency }}
-        </option>
-      {%- else -%}
-        <option disabled="disabled">
-          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
-        </option>
-      {%- endif -%}
-    {%- endfor -%}
-  </select>
+    <select name="id" data-product-select class="product-single__variants no-js">
+      {%- for variant in product.variants -%}
+        {%- if variant.available -%}
+          <option {% if variant == product.selected_or_first_available_variant %}
+            selected="selected"{% endif %}
+            value="{{ variant.id }}">
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {%- else -%}
+          <option value="{{ variant.id }}">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {%- endif -%}
+      {%- endfor -%}
+    </select>
 
   <textarea data-variant-json class="hide" aria-hidden="true" aria-label="Product JSON">
     {{ product.variants | json }}

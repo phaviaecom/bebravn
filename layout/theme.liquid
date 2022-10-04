@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
 <head>
+{% include "starapps-core" %}
+
 <script type="text/javascript">
   var framefenster = document.getElementsByTagName("iFrame");
 
@@ -118,6 +120,7 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="{{ 'customize.js' | asset_url }}" defer="defer"></script>
+{% include "onvoard-initialize-head" %}
 </head>
 
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-center-text="{{ settings.type_body_align_text }}" data-button_style="{{ settings.button_style }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-type_headers_align_text="{{ settings.type_headers_align_text }}" data-type_product_capitalize="{{ settings.type_product_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" {% if settings.disable_animations %}data-disable-animations="true"{% endif %}>
@@ -230,6 +233,37 @@
 
 <!-- HC - Mandatory size selection - 07 September '22 -->
   <script>
+    $(document).ready(function(){
+      $(sizeSwatch).prop('checked', false);
+      $(atc).prop('disabled', true);
+    })
+    let sizeWrap = $('.variant-input-wrap[data-index="option3"]');
+    let sizeSwatch = $(sizeWrap).find('input[type="radio"]');
+    let atc = $('.product-single__form .add-to-cart');
+    let atcForm = $('.product-single__form');
+    let unlockSizes = false;
+    $('.variant-input input[type="radio"]').on('click', function(){
+ 
+     if($(this).data('index') === 'option3'){
+       unlockSizes = true;
+       $(atc).removeAttr('disabled');
+       $('.hc-error').css('display', 'none');
+     }
+     if(!unlockSizes){
+       setTimeout(()=>{
+          $(sizeSwatch).prop('checked', false);
+          $(atc).prop('disabled', true);
+       },0)
+     } 
+    })
+    if($(sizeSwatch).prop('checked') == false) {
+      $(atcForm).click(function(e) {
+        if(!unlockSizes){
+          $('.hc-error').css('display', 'block');
+        }
+        
+      });
+    }
     window.addEventListener('click', function(evt){
       if(evt.target.classList.contains('hc-remove')){
         const { id } = evt.target.dataset;
@@ -251,5 +285,6 @@
       
     });
   </script>
+{% include "onvoard-appscripts" %}
 </body>
 </html>

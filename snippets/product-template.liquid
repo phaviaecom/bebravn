@@ -49,6 +49,7 @@
     endif
   endfor
 -%}
+<div class='sa-variant-picker'></div>
 
 <div id="ProductSection-{{ section_id }}-{{ product.id }}"
   class="product-section"
@@ -63,7 +64,7 @@
   {% unless isModal %}
     data-history="true"
   {% endunless %}
-  data-modal="{{ isModal }}">
+  data-modal="{{ isModal }}"> <a class="sa-product-handle" href="{{ product.url }}"></a>
 
   {%- render 'product-template-variables', product: product, current_variant: current_variant -%}
 

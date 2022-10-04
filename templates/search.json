@@ -5,10 +5,10 @@
       "settings": {
         "enable_sidebar": true,
         "collapsed": false,
-        "filter_style": "sidebar",
+        "filter_style": "drawer",
         "enable_color_swatches": true,
         "per_row": 4,
-        "rows_per_page": 7,
+        "rows_per_page": 20,
         "mobile_flush_grid": true
       }
     }

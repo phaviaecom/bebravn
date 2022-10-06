@@ -73,7 +73,7 @@
 
       <div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}{% if mobile_layout == 'partial' %} grid--product-images--partial{% endif %}">
         {%- if image_position == 'left' -%}
-          <div class="grid__item {{ product_image_width }} product-single__sticky">
+          <div class="product__gallery-grid grid__item {{ product_image_width }} product-single__sticky">
             {%- render 'product-images',
               section_id: section_id,
               product: product,
@@ -406,7 +406,7 @@
         </div>
 
         {%- unless image_position == 'left' -%}
-          <div class="grid__item {{ product_image_width }} product-single__sticky">
+          <div class="product__gallery-grid grid__item {{ product_image_width }} product-single__sticky">
             {%- render 'product-images',
               section_id: section_id,
               product: product,

@@ -1,6 +1,6 @@
 development:
   password: shptka_ac71de700174779c072b1b284ff0548c
-  theme_id: 133256577290
+  theme_id: 133301010698
   store: bebravn.myshopify.com
   ignore_files:
     - config/settings_data.json

@@ -150,3 +150,25 @@
 .single_list-variants .single_swatch-item.is-selected img{
     outline: 2.0px solid #000000;
 }}
+
+/* Style product */
+.product__gallery-grid .product__thumbs--below .product__thumbs--scroller{
+    overflow-x: unset;
+    white-space:unset;
+    display: grid;
+    gap: 8px;
+    grid-template-columns: auto auto;
+}
+.product__gallery-grid .product__thumbs--below .product__thumb-item{
+    margin-right: 0px;
+    max-width: 100%;
+    width: 100%;
+}
+.page-width-1500{
+    padding: 0 17px;
+}
+@media only screen and (min-width: 769px){
+    .page-width-1500{
+        padding: 0 40px;
+    }
+}

@@ -156,7 +156,7 @@
     overflow-x: unset;
     white-space:unset;
     display: grid;
-    gap: 8px;
+    gap: 10px;
     grid-template-columns: auto auto;
 }
 .product__gallery-grid .product__thumbs--below .product__thumb-item{

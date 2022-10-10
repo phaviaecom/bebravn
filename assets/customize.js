@@ -55,7 +55,17 @@ $(document).ready(() => {
 		setTimeout(function () {
 			clearInterval(setTime);
 		}, 6000);
-
+		
+		if($("div[data-product-thumbs] .product__thumb-item").length > 0) {
+			$("div[data-product-thumbs] .product__thumb-item").each(( idx, el )=>{
+				$(el).on('click', (e) => {
+					if($('.product__main-photos .is-selected .js-photoswipe__zoom')){
+						$('.product__main-photos .is-selected').find('.js-photoswipe__zoom').trigger("click");
+					}
+				});
+			});
+		}
+		
 	 }else if( window.location.href.includes("/collections")){
 		let setTime = setInterval(() => {
 			$('.list-variants .swatch-item').each( (idx, el) => {

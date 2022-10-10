@@ -164,15 +164,15 @@
     max-width: 100%;
     width: 100%;
 }
-.page-width-1500{
-    padding: 0 17px;
-}
-@media only screen and (min-width: 769px){
-    .page-width-1500{
-        padding: 0 40px;
-    }
-}
+
 .product__thumb-item a.is-active:before, .product__thumb-item a:focus:before{
     box-shadow: unset;
     box-shadow: unset;
+}
+
+@media only screen and (min-width:769px){
+    .medium-up--one-half{
+      position:sticky;
+      top:20px
+    }
 }

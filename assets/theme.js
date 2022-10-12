@@ -7186,7 +7186,7 @@ lazySizesConfig.expFactor = 4;
   
         var newImage = this.container.querySelector('.product__thumb[data-id="' + variant.featured_media.id + '"]');
         var imageIndex = this.getThumbIndex(newImage);
-  
+
         // If there is no index, slider is not initalized
         if (typeof imageIndex === 'undefined') {
           return;
@@ -7235,7 +7235,7 @@ lazySizesConfig.expFactor = 4;
             onChange: this.onSlideChange.bind(this)
           }
         };
-  
+
         // Override default settings if image set feature enabled
         if (this.settings.imageSetName) {
           var imageSetArgs = this.imageSetArguments(variant);

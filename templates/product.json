@@ -31,8 +31,7 @@
         "caa80da2-3735-47bc-a934-97392e1ee8af": {
           "type": "product_related",
           "settings": {
-            "show_dynamic_product_related": true,
-            "title_related": "FARBE -"
+            "show_dynamic_product_related": true
           }
         },
         "variant_picker": {

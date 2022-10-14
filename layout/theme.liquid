@@ -235,35 +235,59 @@
   <script>
     $(document).ready(function(){
       $(sizeSwatch).prop('checked', false);
-      $(atc).prop('disabled', true);
+      $(atc).prop('disabled', false);
     })
-    let sizeWrap = $('.variant-input-wrap[data-index="option3"]');
-    let sizeSwatch = $(sizeWrap).find('input[type="radio"]');
-    let atc = $('.product-single__form .add-to-cart');
-    let atcForm = $('.product-single__form');
-    let unlockSizes = false;
-    $('.variant-input input[type="radio"]').on('click', function(){
- 
-     if($(this).data('index') === 'option3'){
-       unlockSizes = true;
-       $(atc).removeAttr('disabled');
-       $('.hc-error').css('display', 'none');
-     }
-     if(!unlockSizes){
-       setTimeout(()=>{
-          $(sizeSwatch).prop('checked', false);
-          $(atc).prop('disabled', true);
-       },0)
-     } 
-    })
-    if($(sizeSwatch).prop('checked') == false) {
-      $(atcForm).click(function(e) {
-        if(!unlockSizes){
-          $('.hc-error').css('display', 'block');
-        }
-        
-      });
+    function doSizeRequired(parent) {
+      parent.on("click",".frcp-wishlist-btn--add",function(){
+        $('.hc-error').css('display', 'none');
+      })
+      parent.on("click",".frcp-wishlist-btn--remove",function(){
+        $('.hc-error').css('display', 'none');
+      })
+     // debugger;
+      let sizeWrap = parent.find('.variant-input-wrap[data-index="option3"]');
+      let sizeSwatch = parent.find(sizeWrap).find('input[type="radio"]');
+      let atc = parent.find('.product-single__form .add-to-cart');
+      let atcForm = parent.find('.product-single__form');
+      let unlockSizes = false;
+      parent.find('.variant-input input[type="radio"]').on('click', function(){
+   
+       if($(this).data('index') === 'option3'){
+         unlockSizes = true;
+         $(atc).removeAttr('disabled');
+         parent.find('.hc-error').css('display', 'none');
+       }
+       if(!unlockSizes){
+         setTimeout(()=>{
+            parent.find(sizeSwatch).prop('checked', false);
+            parent.find(atc).prop('disabled', true);
+         },0)
+       } 
+      })
+      if(parent.find(sizeSwatch).prop('checked') == false) {
+        parent.find(atcForm).click(function(e) {
+          if(!unlockSizes){
+            parent.find('.hc-error').css('display', 'block');
+            e.preventDefault();
+          }
+          
+        });
+      }
     }
+    try {
+      doSizeRequired($(document));
+    } catch (err) {
+      console.error(err);
+    }
+    document.addEventListener('quickview:loaded', function(evt) {
+      console.log(evt.detail.productId);
+      const $quickForm = $(`.product-section.is-modal[data-section-id="${evt.detail.productId}"]`);
+      console.log({form: $quickForm[0] });
+      $quickForm.find(sizeSwatch).prop('checked', false);
+      $quickForm.find(atc).prop('disabled', false);
+      doSizeRequired($quickForm);
+      
+    });
     window.addEventListener('click', function(evt){
       if(evt.target.classList.contains('hc-remove')){
         const { id } = evt.target.dataset;

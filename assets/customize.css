@@ -187,13 +187,16 @@
 .product__main-photos .product__main-photo img:hover{
     cursor: zoom-in;
 }
-@media only screen and (min-width: 768px){
+/* @media only screen and (min-width: 768px){
     .product__main-photos .product-slideshow{
         display: none;
     }
-}
-@media only screen and (max-width:767px){
+} */
+/* @media only screen and (max-width:767px){
     .product__main-photos .product__main-photo img{
         display: none;
     }
+} */
+.product__main-photos .product__main-photo img{
+    display: none;
 }

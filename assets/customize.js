@@ -65,13 +65,11 @@ $(document).ready(() => {
 				});
 			});
 		}
-		// if($('.product__main-photo img')){
-		// 	$('.product__main-photo img').on('click', (e) => {
-		// 		if($('.product__main-photos .starting-slide .js-photoswipe__zoom')){
-		// 			$('.product__main-photos .starting-slide').find('.js-photoswipe__zoom').trigger("click");
-		// 		}
-		// 	})
-		// }
+		if($('.product__main-photo img')){
+			$('.product__main-photo img').on('click', (e) => {
+				$('.product__thumb-item.product__thumb-item-featured').trigger('click');
+			})
+		}
 		
 	 }else if( window.location.href.includes("/collections")){
 		let setTime = setInterval(() => {

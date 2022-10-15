@@ -102,6 +102,9 @@
                     data-set-name="{{image_set_group}}"
                     data-group="{{image_set_full}}"
                   {% endif %} 
+                  {% if media.id == product.selected_or_first_available_variant.featured_media.id %}
+                    style="display: none ;"
+                  {% endif %}  
                 >
                   <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: media.preview_image.aspect_ratio }}%;">
                     <a

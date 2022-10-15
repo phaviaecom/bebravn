@@ -186,6 +186,12 @@
     .product__main-photos .product-slideshow{
         display: none;
     }
+    .product__main-photos img{
+        display:block;
+    }
+}
+.product__main-photos .product__main-photo img:hover{
+    cursor: zoom-in;
 }
 .product__thumb-item.product__thumb-item-featured{
     grid-column-start: span 2;

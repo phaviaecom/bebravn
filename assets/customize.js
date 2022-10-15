@@ -67,7 +67,11 @@ $(document).ready(() => {
 		}
 		if($('.product__main-photo img')){
 			$('.product__main-photo img').on('click', (e) => {
-				$('.product__thumb-item.product__thumb-item-featured').trigger('click');
+				if($('.product__thumb-item.product__thumb-item-featured').length != 0){
+					$('.product__thumb-item.product__thumb-item-featured').trigger('click');
+				}else{
+					$('.product__main-photos .is-selected').find('.js-photoswipe__zoom').trigger("click");
+				}
 			})
 		}
 		

@@ -199,3 +199,7 @@
 .product__thumbs--single .product__thumb-item{
     grid-column-start: span 2;
 }
+.product__thumb-item-second .image-wrap:hover{
+  border:none;
+  outline: unset;
+}

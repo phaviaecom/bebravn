@@ -12,3 +12,26 @@
     </div>
   </div>
 </div>
+{%- style -%}
+  #QuickShopModal-{{ product.id }} .product__main-photos .product-slideshow{
+    display: block;
+  }
+  #QuickShopModal-{{ product.id }} .product__main-photos .product__main-photo{
+    display: none;
+  }
+  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item.product__thumb-item-featured{
+    display: block !important;
+  }
+  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item a.is-active:before, 
+  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item a:focus:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 0 2px var(--colorTextBody) !important;
+    z-index: 1;
+  }
+{%- endstyle -%}

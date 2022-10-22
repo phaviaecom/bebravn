@@ -6129,16 +6129,14 @@ form+.footer__social{
   position:absolute;
   width:100%;
   transform-origin:left top;
-  will-change:opacity;
-  opacity: 0;
-  transition:opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+  transition:transform 333ms cubic-bezier(0.4, 0, 0.22, 1); }
 
 .pswp__bg{
   will-change:opacity;
   transition:opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
 
 .pswp--animated-in .pswp__bg,.pswp--animated-in .pswp__zoom-wrap{
-  transition:none; opacity: 1;}
+  transition:none; }
 
 .pswp__container,.pswp__zoom-wrap{
   -webkit-backface-visibility:hidden; }
@@ -12085,7 +12083,7 @@ color: #000000 !important;
   border-radius: 3px;
   text-transform: uppercase !important;
   font-size: 13px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-weight: 600;
 }
 
@@ -12093,7 +12091,7 @@ color: #000000 !important;
   border-radius: 3px;
   text-transform: uppercase !important;
   font-size: 13px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-weight: 600;
 }
 
@@ -12102,7 +12100,7 @@ color: #000000 !important;
   border-radius: 3px;
   text-transform: uppercase !important;
   font-size: 12px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-weight: 600;
 }
 
@@ -12110,21 +12108,21 @@ color: #000000 !important;
   border-radius: 3px;
   text-transform: uppercase !important;
   font-size: 13px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-weight: 600;
 }
 
 .frcp-btn__text{
   text-transform: uppercase !important;
   font-size: 12px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-weight: 600;
 }
 
 .frcp-form__secondary-btn{
   text-transform: uppercase !important;
   font-size: 12px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-weight: 600;
   border-radius: 3px;
 }
@@ -12133,7 +12131,7 @@ color: #000000 !important;
   background: #e5e5e5 !important;
   text-transform: uppercase !important;
   font-size: 12px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-weight: 600;
   border-radius: 3px;
   color: #545454 !important;
@@ -12253,7 +12251,7 @@ color: #000000 !important;
 .quick-product__btn {
   text-transform: uppercase !important;
   font-size: 13px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   font-weight: 600;
   border-radius: 3px;
 }
@@ -12261,6 +12259,8 @@ color: #000000 !important;
 .image-wrap:hover {
     outline: 1.0px solid darkgrey;
 }
+
+/* BRAVN - Adjustments Judge.me - 19 October '22 */
 
 .jdgm-rev-widg {
     max-width: 1500px !important;
@@ -12274,9 +12274,7 @@ color: #000000 !important;
     text-decoration: none !important;
     cursor: text !important;
     color: black !important;
-    position: relative;
-    top: -30px;
-    left: -105px;
+    display: flex !important;
 }
 
 .jdgm-rev__icon {
@@ -12286,12 +12284,109 @@ color: #000000 !important;
 .jdgm-rev-widg__summary-average {
     font-size: 83px !important;
     font-weight: 600;
-    display: inline-block !important;
-    position: relative;
+    display: flex !important;
 }
 
 .jdgm-rev-widg__summary-stars {
-    position: relative;
-    top: 15px;
     display: inline-block !important;
+}
+
+@media screen and (min-width: 768px){
+.jdgm-histogram {
+    width: 50% !important;
+}
+
+.jdgm-rev-widg__summary {
+    width: 25% !important;
+}
+
+.jdgm-widget-actions-wrapper {
+    width: 25% !important;
+}
+  
+.jdgm-histogram__bar {
+    width: 340px !important;
+}}
+
+.jdgm-write-rev-link {
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.3em !important;
+    font-weight: 600 !important;
+    border-radius: 3px !important;
+    max-width: 280px !important;
+    background: #1e4274 !important;
+    border-color: #1e4274 !important;
+}
+
+.jdgm-btn--solid {
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.25em !important;
+    font-weight: 600 !important;
+    border-radius: 3px !important;
+    background: #1e4274 !important;
+    border-color: #1e4274 !important
+}
+
+.jdgm-btn--border {
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.25em !important;
+    font-weight: 600 !important;
+    border-radius: 3px !important;
+    border-color: #e5e5e5 !important;
+    background: #e5e5e5 !important;
+    color: #545454 !important;
+}
+
+.close-form-btn {
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.25em !important;
+    font-weight: 600 !important;
+    border-radius: 3px !important;
+    border-color: #e5e5e5 !important;
+    background: #e5e5e5 !important;
+    color: #545454 !important;
+}
+
+.jdgm-rev__title {
+    font-size: 150% !important;
+    font-weight: 600 !important;
+}
+
+.jdgm-rev-widg__header {
+    box-shadow: none !important;
+}
+
+.jdgm-rev__slider-pointer {
+    background: #1e4274 !important;
+}
+
+.jdgm--filled {
+    background-color: #1e4274 !important;
+    margin: 1px !important;
+}
+
+.jdgm--empty {
+    margin: 1px !important;
+}
+
+.jdgm-rev__slider-wrapper {
+    min-width: 100% !important;
+}
+
+.jdgm-cf-bars-wrapper {
+    min-width: 100% !important;
+}
+
+.jdgm-row-actions {
+    border-bottom: 1px solid !important;
+    border-color: #e8e8e1 !important;
+}
+
+.jdgm-rev-widg__actions {
+    box-shadow: none !important;
+    padding-left: 2px !important;
 }

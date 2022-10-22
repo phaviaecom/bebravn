@@ -1,0 +1,88 @@
+function validateFromQuickView(id){
+  let $form = $(`[data-section-id=${id}]`)
+  let sizeWrapper = $form.find('.variant-input-wrap[data-index="option3"]')
+  let atcForm = $('.product-single__form');
+  if(sizeWrapper){
+    let unlockSizes = false;
+    let sizeSwatches = $(sizeWrapper).find('input[type="radio"]');
+    $(sizeSwatches).prop('checked', false);
+    $('.variant-input input[type="radio"]').on('click', function(){
+       if($(this).data('index') === 'option3'){
+         unlockSizes = true;
+         $('.hc-error').css('display', 'none');
+       }
+    });
+   if($(sizeSwatches).prop('checked') === false) {
+      $(atcForm).click(function(e) {
+        if(!unlockSizes){
+          $('.hc-error').css('display', 'block');
+          e.preventDefault();
+        }
+      });
+    }
+  } 
+}
+document.addEventListener('quickview:loaded', function(evt) {
+  validateFromQuickView(evt.detail.productId)
+});
+document.addEventListener('quickview:open', function(evt) {
+  validateFromQuickView(evt.detail.productId)
+});
+
+document.addEventListener('page:loaded', function(){
+    $(document).on("click",".frcp-wishlist-btn--add",function(){
+    $('.hc-error').css('display', 'none');
+  })
+  $(document).on("click",".frcp-wishlist-btn--remove",function(){
+    $('.hc-error').css('display', 'none');
+  })
+  let sizeWrap = $('.variant-input-wrap[data-index="option3"]');
+  let sizeSwatch = $(sizeWrap).find('input[type="radio"]');
+  let atc = $('.product-single__form .add-to-cart');
+  let atcForm = $('.product-single__form');
+  let unlockSizes = false;
+  $('.variant-input input[type="radio"]').on('click', function(){
+
+   if($(this).data('index') === 'option3'){
+     unlockSizes = true;
+     $(atc).removeAttr('disabled');
+     $('.hc-error').css('display', 'none');
+   }
+   if(!unlockSizes){
+     setTimeout(()=>{
+        $(sizeSwatch).prop('checked', false);
+        $(atc).prop('disabled', true);
+     },0)
+   } 
+  })
+  if($(sizeSwatch).prop('checked') == false) {
+    $(atcForm).click(function(e) {
+      if(!unlockSizes){
+        $('.hc-error').css('display', 'block');
+        e.preventDefault();
+      }
+      
+    });
+  }
+})
+
+    
+window.addEventListener('click', function(evt){
+  if(evt.target.classList.contains('hc-remove')){
+    const { id } = evt.target.dataset;
+    let updates = {};
+    updates[id] = 0;
+    let params = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ updates }),
+    };
+    fetch('/cart/update.js', params)
+      .then(res => res.json())
+      .then(res => {
+        document.dispatchEvent(new CustomEvent('cart:build'));
+      })
+  }
+});

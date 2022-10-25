@@ -146,11 +146,12 @@
   </div>
 
   {%- section 'newsletter-popup' -%}
-
+<!-- 'photoswipe-template' -->
   {%- liquid
     render 'video-modal'
-    render 'photoswipe-template'
+    render 'ezfy-zoom'
     render 'tool-tip'
+    
   -%}
 
 
@@ -234,6 +235,6 @@
 <!-- HC - Mandatory size selection - 07 September '22 -->
   {{ 'hc-validations.js' | asset_url | script_tag }}
 {% include "onvoard-appscripts" %}
-{% include 'ezfy-zoom' %}
+
 </body>
 </html>

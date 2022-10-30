@@ -56,24 +56,24 @@ $(document).ready(() => {
 			clearInterval(setTime);
 		}, 6000);
 		
-		if($("div[data-product-thumbs] .product__thumb-item").length > 0) {
-			$("div[data-product-thumbs] .product__thumb-item").each(( idx, el )=>{
-				$(el).on('click', (e) => {
-					if($('.product__main-photos .is-selected .js-photoswipe__zoom')){
-						$('.product__main-photos .is-selected').find('.js-photoswipe__zoom').trigger("click");
-					}
-				});
-			});
-		}
-		if($('.product__main-photo img')){
-			$('.product__main-photo img').on('click', (e) => {
-				if($('.product__thumb-item.product__thumb-item-featured').length != 0){
-					$('.product__thumb-item.product__thumb-item-featured').trigger('click');
-				}else{
-					$('.product__main-photos .is-selected').find('.js-photoswipe__zoom').trigger("click");
-				}
-			})
-		}
+		// if($("div[data-product-thumbs] .product__thumb-item").length > 0) {
+		// 	$("div[data-product-thumbs] .product__thumb-item").each(( idx, el )=>{
+		// 		$(el).on('click', (e) => {
+		// 			if($('.product__main-photos .is-selected .js-photoswipe__zoom')){
+		// 				$('.product__main-photos .is-selected').find('.js-photoswipe__zoom').trigger("click");
+		// 			}
+		// 		});
+		// 	});
+		// }
+		// if($('.product__main-photo img')){
+		// 	$('.product__main-photo img').on('click', (e) => {
+		// 		if($('.product__thumb-item.product__thumb-item-featured').length != 0){
+		// 			$('.product__thumb-item.product__thumb-item-featured').trigger('click');
+		// 		}else{
+		// 			$('.product__main-photos .is-selected').find('.js-photoswipe__zoom').trigger("click");
+		// 		}
+		// 	})
+		// }
 		
 	 }else if( window.location.href.includes("/collections")){
 		let setTime = setInterval(() => {

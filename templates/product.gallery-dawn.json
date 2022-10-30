@@ -1,0 +1,372 @@
+{
+	"sections": {
+	  "main": {
+		"type": "main-product-dawn",
+		"blocks": {
+		  "judgeme_preview_badge_product_page_a5909f99": {
+			"type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+			"settings": {}
+		  },
+		  "3ac519ad-301a-415c-b496-e60c6a59e82b": {
+			"type": "shopify:\/\/apps\/onvoard-reviews\/blocks\/star-rating\/97297b12-037b-43b6-a7e7-97ed4af751a9",
+			"disabled": true,
+			"settings": {
+			  "app_id": "star_dq8g1y2ud33aujx"
+			}
+		  },
+		  "b79c3e75-ca7e-4a08-95db-5b98795a6daf": {
+			"type": "text",
+			"settings": {
+			  "text": ""
+			}
+		  },
+		  "price": {
+			"type": "price",
+			"settings": {}
+		  },
+		  "482cd553-9072-46f0-aabb-90ece19344a8": {
+			"type": "separator",
+			"settings": {}
+		  },
+		  "caa80da2-3735-47bc-a934-97392e1ee8af": {
+			"type": "product_related",
+			"settings": {
+			  "show_dynamic_product_related": true
+			}
+		  },
+		  "variant_picker": {
+			"type": "variant_picker",
+			"settings": {
+			  "variant_labels": true,
+			  "picker_type": "button",
+			  "color_swatches": true
+			}
+		  },
+		  "01624e4c-00a9-48af-9af1-f7d9aded2f6b": {
+			"type": "size_chart",
+			"disabled": true,
+			"settings": {
+			  "size_chart": "grossentabelle-kleidung-herren"
+			}
+		  },
+		  "8093feb1-31a3-4627-8a3c-93d5b2b5c065": {
+			"type": "quantity_selector",
+			"disabled": true,
+			"settings": {}
+		  },
+		  "inventory_status": {
+			"type": "inventory_status",
+			"disabled": true,
+			"settings": {
+			  "inventory_threshold": 10,
+			  "inventory_transfers_enable": true
+			}
+		  },
+		  "b288b161-62cc-4e7a-a284-5500d29f5cbf": {
+			"type": "shopify:\/\/apps\/onvoard-back-in-stock\/blocks\/inline-form\/38621407-cf66-484e-b0c5-088b87e2729e",
+			"settings": {
+			  "app_id": "bis_6635e4hf5ry33bs"
+			}
+		  },
+		  "buy_buttons": {
+			"type": "buy_buttons",
+			"settings": {
+			  "show_dynamic_checkout": false,
+			  "surface_pickup_enable": false
+			}
+		  },
+		  "dd7488b0-0e3b-43fa-9458-f5bf89fac4d7": {
+			"type": "separator",
+			"settings": {}
+		  },
+		  "1fa0dc4a-ccf4-4e31-a5e6-e3a8f621e833": {
+			"type": "sales_point",
+			"settings": {
+			  "icon": "truck",
+			  "text": "KOSTENFREIE LIEFERUNG AB €79,-"
+			}
+		  },
+		  "sales_point": {
+			"type": "sales_point",
+			"settings": {
+			  "icon": "globe",
+			  "text": "WELTWEITER VERSAND"
+			}
+		  },
+		  "02f51e89-156f-4578-a678-c220ad5f6a4f": {
+			"type": "sales_point",
+			"settings": {
+			  "icon": "leaf",
+			  "text": "NACHHALTIGE PRODUKTION"
+			}
+		  },
+		  "separator": {
+			"type": "separator",
+			"settings": {}
+		  },
+		  "description": {
+			"type": "description",
+			"settings": {
+			  "is_tab": false
+			}
+		  },
+		  "tab": {
+			"type": "tab",
+			"settings": {
+			  "title": "Material und Pflege",
+			  "content": "",
+			  "page": "{{ product.metafields.my_fields.material_und_pflege.value }}"
+			}
+		  },
+		  "f950efad-4dbb-47f6-a618-60bc8300bb1f": {
+			"type": "tab",
+			"settings": {
+			  "title": "Versandbedingungen",
+			  "content": "",
+			  "page": "versandbedingungen"
+			}
+		  },
+		  "contact": {
+			"type": "contact",
+			"disabled": true,
+			"settings": {
+			  "title": "Ask a question",
+			  "phone": false
+			}
+		  },
+		  "0e084ffa-c4b8-493a-80fd-92bd3a1a1d75": {
+			"type": "tab",
+			"settings": {
+			  "title": "Rückgaberichtlinien",
+			  "content": "",
+			  "page": "ruckgaberichtlinien"
+			}
+		  },
+		  "share": {
+			"type": "share",
+			"settings": {}
+		  }
+		},
+		"block_order": [
+		  "judgeme_preview_badge_product_page_a5909f99",
+		  "3ac519ad-301a-415c-b496-e60c6a59e82b",
+		  "b79c3e75-ca7e-4a08-95db-5b98795a6daf",
+		  "price",
+		  "482cd553-9072-46f0-aabb-90ece19344a8",
+		  "caa80da2-3735-47bc-a934-97392e1ee8af",
+		  "variant_picker",
+		  "01624e4c-00a9-48af-9af1-f7d9aded2f6b",
+		  "8093feb1-31a3-4627-8a3c-93d5b2b5c065",
+		  "inventory_status",
+		  "b288b161-62cc-4e7a-a284-5500d29f5cbf",
+		  "buy_buttons",
+		  "dd7488b0-0e3b-43fa-9458-f5bf89fac4d7",
+		  "1fa0dc4a-ccf4-4e31-a5e6-e3a8f621e833",
+		  "sales_point",
+		  "02f51e89-156f-4578-a678-c220ad5f6a4f",
+		  "separator",
+		  "description",
+		  "tab",
+		  "f950efad-4dbb-47f6-a618-60bc8300bb1f",
+		  "contact",
+		  "0e084ffa-c4b8-493a-80fd-92bd3a1a1d75",
+		  "share"
+		],
+		"settings": {
+		  "sku_enable": false,
+		  "image_position": "left",
+		  "image_size": "large",
+		  "product_zoom_enable": true,
+		  "thumbnail_position": "below",
+		  "thumbnail_arrows": false,
+		  "mobile_layout": "full",
+		  "enable_video_looping": true,
+		  "product_video_style": "muted"
+		}
+	  },
+	  "sub": {
+		"type": "product-full-width",
+		"disabled": true,
+		"settings": {
+		  "max_width": true
+		}
+	  },
+	  "judgeme_section_review_widget_6229": {
+		"type": "apps",
+		"blocks": {
+		  "e02a2314-2cf3-4a46-ab0e-6454ebd754f6": {
+			"type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/ugc_media_grid\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+			"settings": {}
+		  },
+		  "judgeme_review_widget_fe46b0b3": {
+			"type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+			"settings": {}
+		  }
+		},
+		"block_order": [
+		  "e02a2314-2cf3-4a46-ab0e-6454ebd754f6",
+		  "judgeme_review_widget_fe46b0b3"
+		],
+		"settings": {
+		  "full_width": false,
+		  "space_around": true
+		}
+	  },
+	  "1664518585f4b165b7": {
+		"type": "apps",
+		"blocks": {
+		  "272d52ea-cc84-4ffb-ac9d-f9e64babcd2d": {
+			"type": "shopify:\/\/apps\/onvoard-reviews\/blocks\/reviews-widget\/97297b12-037b-43b6-a7e7-97ed4af751a9",
+			"disabled": true,
+			"settings": {
+			  "app_id": "rwget_qkae8ty12fa1bwz"
+			}
+		  }
+		},
+		"block_order": [
+		  "272d52ea-cc84-4ffb-ac9d-f9e64babcd2d"
+		],
+		"settings": {
+		  "full_width": false,
+		  "space_around": true
+		}
+	  },
+	  "16598516943598945e": {
+		"type": "rich-text",
+		"settings": {
+		  "align_text": "left",
+		  "narrow_column": false,
+		  "divider": true
+		}
+	  },
+	  "product-recommendations": {
+		"type": "product-recommendations",
+		"settings": {
+		  "show_product_recommendations": true,
+		  "product_recommendations_heading": "Empfehlungen für dich",
+		  "related_count": 6
+		}
+	  },
+	  "recently-viewed": {
+		"type": "recently-viewed",
+		"disabled": true,
+		"settings": {
+		  "recent_count": 5
+		}
+	  },
+	  "1659026380f0ced957": {
+		"type": "hero-video",
+		"settings": {
+		  "title": "Be You...\n#BeBravn",
+		  "title_size": 80,
+		  "subheading": "",
+		  "link_text": "F﻿eel the Vibe",
+		  "link": "https:\/\/youtu.be\/cIaIGacRoe4",
+		  "color_accent": "rgba(0,0,0,0)",
+		  "text_align": "vertical-center horizontal-center",
+		  "video_url": "https:\/\/youtu.be\/cIaIGacRoe4",
+		  "overlay_opacity": 0,
+		  "section_height": "750px",
+		  "mobile_height": "500px"
+		}
+	  },
+	  "text-and-image": {
+		"type": "text-and-image",
+		"settings": {
+		  "image": "shopify:\/\/shop_images\/Bravn_tag_front_02.jpg",
+		  "image_width": 400,
+		  "subtitle": "",
+		  "title": "Mit der Sonne im Herzen",
+		  "text": "<p>Unsere Mission ist es einen aktiven Lifestyle für jede und jeden zugänglich, nahbar und spannend zu vermitteln und wir haben dafür die perfekte Sportbekleidung. BRAVN ist eine Sportfashion-Brand Made in Germany, jedoch mit der Sonne im Herzen, ganz nach dem Vorbild von Kalifornien. Egal, an welchem Punkt Du Dich auf Deiner Sport-Laufbahn befindest, wir haben genau das, was Du gerade brauchst. Alle unsere Produkte sind dafür gemacht Höchstleistungen zu erreichen und dabei toll auszusehen. Qualität, Funktionalität und Komfort sind bei uns großgeschrieben. <\/p>",
+		  "button_label": "",
+		  "button_link": "",
+		  "button_style": "primary",
+		  "align_text": "left",
+		  "layout": "right",
+		  "divider": false
+		}
+	  },
+	  "text-and-image2": {
+		"type": "text-and-image",
+		"settings": {
+		  "image": "shopify:\/\/shop_images\/Bravn-Santa-Ana-black-folded-tshirt-topside.jpg",
+		  "image_width": 500,
+		  "subtitle": "",
+		  "title": "BRAVN X Santa Ana",
+		  "text": "<p>BRAVN steht für hochfunktionelle und gleichzeitig stylische Sportswear mit dem California-Feeling in jedem unserer Produkte. Das Santa Ana T-Shirt ist eines unserer Klassiker und ist erhältlich mit V-Ausschnitt und Rundhals. Das T-Shirt ist aus 65% Baumwolle gemacht und somit besonders atmungsaktiv und angenehm auf der Haut, ohne dabei zu beschweren. So bist Du jederzeit für alle Challenges gewappnet, ob beim Trainieren oder im Alltag - unsere T-Shirts sind wahre Alleskönner. <\/p>",
+		  "button_label": "",
+		  "button_link": "",
+		  "button_style": "primary",
+		  "align_text": "left",
+		  "layout": "left",
+		  "divider": false
+		}
+	  },
+	  "background-image-text": {
+		"type": "background-image-text",
+		"settings": {
+		  "subtitle": "Im Focus",
+		  "title": "Der Sonne entgegen",
+		  "text": "<p>Egal, wie Dein Weg aussieht, BRAVN hat die richtige Sportswear für alle Deine Challenges. <\/p>",
+		  "button_label": "Kollektionen Anzeigen",
+		  "button_link": "shopify:\/\/collections\/all",
+		  "image": "shopify:\/\/shop_images\/AdobeStock_217451260-2.jpg",
+		  "focal_point": "center",
+		  "layout": "left",
+		  "height": 750,
+		  "framed": false,
+		  "parallax": true
+		}
+	  },
+	  "165907557357886348": {
+		"type": "newsletter",
+		"blocks": {
+		  "1659075573a3207ae0-0": {
+			"type": "title",
+			"settings": {
+			  "title": "ANMELDEN UND 10% SPAREN"
+			}
+		  },
+		  "1659075573a3207ae0-1": {
+			"type": "text",
+			"settings": {
+			  "text": "<p>Melde dich bei unserem Newsletter an und profitiere von exklusiven Angeboten, Giveaways, einmaligen Deals und 10% Rabatt auf deine erste Bestellung.<\/p>"
+			}
+		  },
+		  "1659075573a3207ae0-2": {
+			"type": "form",
+			"settings": {}
+		  }
+		},
+		"block_order": [
+		  "1659075573a3207ae0-0",
+		  "1659075573a3207ae0-1",
+		  "1659075573a3207ae0-2"
+		],
+		"settings": {
+		  "color_background": "#e0f5ff",
+		  "color_text": "#1c1d1d"
+		}
+	  },
+	  "collection-return": {
+		"type": "collection-return",
+		"disabled": true,
+		"settings": {}
+	  }
+	},
+	"order": [
+	  "main",
+	  "sub",
+	  "judgeme_section_review_widget_6229",
+	  "1664518585f4b165b7",
+	  "16598516943598945e",
+	  "product-recommendations",
+	  "recently-viewed",
+	  "1659026380f0ced957",
+	  "text-and-image",
+	  "text-and-image2",
+	  "background-image-text",
+	  "165907557357886348",
+	  "collection-return"
+	]
+  }

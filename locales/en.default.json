@@ -8,7 +8,21 @@
       "skip_to_content": "Skip to content",
       "close_modal": "Close (esc)",
       "close": "Close",
-      "learn_more": "Learn more"
+      "learn_more": "Learn more",
+      "skip_to_text": "Skip to content",
+      "skip_to_product_info": "Skip to product information",
+      "unit_price_separator": "per",
+      "vendor": "Vendor:",
+      "error": "Error",
+      "refresh_page": "Choosing a selection results in a full page refresh.",
+      "link_messages": {
+        "new_window": "Opens in a new window.",
+        "external": "Opens external website."
+      },
+      "loading": "Loading...",
+      "total_reviews": "total reviews",
+      "star_reviews_info": "{{ rating_value }} out of {{ rating_max }} stars",
+      "collapsible_content_title": "Collapsible content"
     },
     "meta": {
       "tags": "Tagged \"{{ tags }}\"",
@@ -74,6 +88,11 @@
     },
     "language": {
       "dropdown_label": "Language"
+    },
+    "slider": {
+      "of": "of",
+      "next_slide": "Slide right",
+      "previous_slide": "Slide left"
     }
   },
   "sections": {
@@ -329,7 +348,17 @@
       "view_in_space": "View in your space",
       "view_in_space_label": "View in your space, loads item in augmented reality window",
       "colors_singular": "Color",
-      "colors_plural": "Colors"
+      "colors_plural": "Colors",
+      "media": {
+        "gallery_viewer": "Gallery Viewer",
+        "load_image": "Load image {{ index }} in gallery view",
+        "load_model": "Load 3D Model {{ index }} in gallery view",
+        "load_video": "Play video {{ index }} in gallery view",
+        "image_available": "Image {{ index }} is now available in gallery view",
+        "open_media": "Open media {{ index }} in modal",
+        "play_model": "Play 3D Viewer",
+        "play_video": "Play video"
+      }
     }
   },
   "store_availability": {

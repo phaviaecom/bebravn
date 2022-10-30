@@ -190,30 +190,55 @@
         display:block;
     }
 }
-.product__main-photos .product__main-photo img:hover{
-    cursor: zoom-in;
+/* Desktop */
+.product__media-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding: 0;
+    list-style: none;
+    column-gap: 10px;
+    row-gap: 10px;
 }
-.product__thumb-item.product__thumb-item-featured{
-    grid-column-start: span 2;
+.product__media-item--variant:first-child {
+    display: block;
 }
-.product__thumbs--single .product__thumb-item{
-    grid-column-start: span 2;
+@media only screen and (min-width: 750px){
+    
+    .product__media-list .product__media-item {
+        max-width: 100%;
+        width: calc(50% - 10px / 2);
+    }
+    .grid--2-col-media .product__media-list .product__media-item {
+        max-width: 100%;
+        width: 100%;
+    }
+    .product__media-list .product__media-item:first-child {
+        width: 100%;
+    }
+    .product__modal-opener .product__media-icon {
+        opacity: 0;
+    }
+    .product__modal-opener:hover .product__media-icon, 
+    .product__modal-opener:focus .product__media-icon{
+        opacity: 1;
+    } 
+    .product__media-list .slider__slide{
+        flex-grow: 1;
+    }
 }
-.product__thumb-item-second .image-wrap:hover{
-  border:none;
-  outline: unset;
+
+
+/* Mobile */
+@media only screen and (max-width: 740px){
+    .product__media-item--variant:first-child {
+        padding-right: 1.5rem;
+    }
+    .slider.slider--mobile .slider__slide {
+        max-width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        box-sizing: content-box;
+        margin: 0;
+    }
 }
-.pswp__zoom-wrap{
-    position:absolute;
-    width:100%;
-    transform-origin:left top;
-    will-change:opacity;
-    opacity: 0;
-    transition:opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
-  
-  .pswp__bg{
-    will-change:opacity;
-    transition:opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
-  
-  .pswp--animated-in .pswp__bg,.pswp--animated-in .pswp__zoom-wrap{
-    transition:none; opacity: 1;}

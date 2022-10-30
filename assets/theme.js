@@ -6618,7 +6618,7 @@ lazySizesConfig.expFactor = 4;
   
       productSetup: function() {
         this.setImageSizes();
-        this.initImageZoom();
+       // this.initImageZoom();
         this.initModelViewerLibraries();
         this.initShopifyXrLaunch();
   
@@ -7881,7 +7881,7 @@ lazySizesConfig.expFactor = 4;
     theme.sections.register('product', theme.Product);
     theme.sections.register('blog', theme.Blog);
     theme.sections.register('password-header', theme.PasswordHeader);
-    theme.sections.register('photoswipe', theme.Photoswipe);
+    //theme.sections.register('photoswipe', theme.Photoswipe);
     theme.sections.register('product-recommendations', theme.Recommendations);
     theme.sections.register('background-image', theme.BackgroundImage);
     theme.sections.register('testimonials', theme.Testimonials);

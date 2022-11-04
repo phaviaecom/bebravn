@@ -243,5 +243,5 @@
     }
 }
 .modal--is-active .product__photo-zoom:hover{
-    cursor: pointer;
+    cursor: revert;
 }

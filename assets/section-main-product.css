@@ -483,11 +483,11 @@
 	}
   
 	.product__media-list .product__media-item {
-	  width: calc(100% - 3rem);
+	  width: calc(100% - 0rem);
 	}
   
-	.slider.product__media-list .product__media-item:first-of-type {
-	  padding-left: 1.5rem;
+	.slider.product__media-list .product__media-item {
+	  padding-left: 1.2rem;
 	}
   }
   

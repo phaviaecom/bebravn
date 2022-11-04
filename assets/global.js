@@ -294,8 +294,8 @@ function getFocusableElements(container) {
 	  this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
   
 	  if (this.currentPageElement && this.pageTotalElement) {
-		this.currentPageElement.textContent = this.currentPage;
-		this.pageTotalElement.textContent = this.totalPages;
+		this.currentPageElement.textContent = this.currentPage != "null" ? this.currentPage : 1;
+		this.pageTotalElement.textContent = (this.totalPages - 1) > 1 ? (this.totalPages - 1) : 1;
 	  }
   
 	  if (this.currentPage != previousPage) {

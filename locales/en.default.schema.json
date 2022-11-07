@@ -1312,7 +1312,7 @@
         },
         "header": {
           "content": "Media",
-          "info": "Learn more about [media types.](https://help.shopify.com/manual/products/product-media)"
+          "info": "Learn more about [media types.](https:\/\/help.shopify.com\/manual\/products\/product-media)"
         },
         "gallery_layout": {
           "label": "Desktop layout",
@@ -3566,8 +3566,8 @@
       }
     },
     "product_related": {
-       "name": "Product related",
-       "label": "Color"
+      "name": "Product related",
+      "label": "Color"
     }
   }
 }

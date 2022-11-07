@@ -566,8 +566,8 @@
 	height: 2rem;
 	width: 2rem;
 	position: absolute;
-	left: calc( 0.4rem + 1px);
-	top: calc(0.4rem + 1px);
+	right: calc( 0.8rem + 1px);
+	bottom: calc(0.8rem + 1px);
 	z-index: 1;
 	transition: color var(--duration-short) ease,
 	  opacity var(--duration-short) ease;

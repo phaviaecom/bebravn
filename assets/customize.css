@@ -231,9 +231,9 @@
 
 /* Mobile */
 @media only screen and (max-width: 740px){
-    .product__media-item--variant:first-child {
+    /* .product__media-item--variant:first-child {
         padding-right: 1.5rem;
-    }
+    } */
     .slider.slider--mobile .slider__slide {
         max-width: 100%;
         margin-bottom: 0;
@@ -241,7 +241,13 @@
         box-sizing: content-box;
         margin: 0;
     }
+    .product__media-list{
+        column-gap: 0px;
+    }
 }
 .modal--is-active .product__photo-zoom:hover{
     cursor: revert;
+}
+html, body { 
+    scroll-behavior: smooth
 }

@@ -458,10 +458,11 @@
   
   @media screen and (max-width: 749px) {
 	.product__media-list {
-	  margin-left: -2.5rem;
+	  /* margin-left: -2.5rem; */
 	  padding-bottom: 2rem;
 	  margin-bottom: 3rem;
-	  width: calc(100% + 4rem);
+	  width: calc(100% + 34px);
+	  padding: 0;
 	}
   
 	.product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
@@ -483,12 +484,12 @@
 	}
   
 	.product__media-list .product__media-item {
-	  width: calc(100% - 0rem);
+	  width: calc(100%);
 	}
   
-	.slider.product__media-list .product__media-item {
+	/* .slider.product__media-list .product__media-item:first-child {
 	  padding-left: 1.2rem;
-	}
+	} */
   }
   
   @media screen and (min-width: 750px) {

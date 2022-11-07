@@ -271,8 +271,14 @@ function getFocusableElements(container) {
 	  resizeObserver.observe(this.slider);
   
 	  this.slider.addEventListener('scroll', this.update.bind(this));
+	  this.slider.addEventListener('mousemove', this.update.bind(this), false);
+	  this.slider.addEventListener('touchmove', this.update.bind(this), false);
+	  this.slider.addEventListener('mouseup', this.update.bind(this), false);
+	  this.slider.addEventListener('touchend', this.update.bind(this), false);
+
 	  this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
 	  this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
+
 	}
   
 	initPages() {
@@ -292,10 +298,9 @@ function getFocusableElements(container) {
 	update() {
 	  const previousPage = this.currentPage;
 	  this.currentPage = Math.round(this.slider.scrollLeft / this.sliderItemOffset) + 1;
-  
 	  if (this.currentPageElement && this.pageTotalElement) {
 		this.currentPageElement.textContent = this.currentPage != "null" ? this.currentPage : 1;
-		this.pageTotalElement.textContent = (this.totalPages - 1) > 1 ? (this.totalPages - 1) : 1;
+		this.pageTotalElement.textContent = this.totalPages > 1 ? this.totalPages : 1;
 	  }
   
 	  if (this.currentPage != previousPage) {

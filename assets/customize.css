@@ -225,6 +225,11 @@
     } 
     .product__media-list .slider__slide{
         flex-grow: 1;
+        margin-bottom: 0px;
+    }
+    .product__media-list-4 li[data-ezfy-media-position="4"],
+    .product__media-list-6 li[data-ezfy-media-position="6"]{
+        width: 100%;
     }
 }
 

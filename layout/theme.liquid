@@ -236,5 +236,52 @@
   {{ 'hc-validations.js' | asset_url | script_tag }}
 {% include "onvoard-appscripts" %}
 
+  <!-- JUDGE.ME Customization Start -->
+   {% if template contains "product" %}
+  <div style="display: none !important">
+    <div class="jm-rating">
+      {{ product.metafields.reviews.rating.value }}
+    </div>
+  </div>
+  
+    <script>
+      var timer = setInterval(function() {
+          var container = document.querySelector(".jdgm-rev-widg__summary");
+          if (container) {
+            container.prepend(document.querySelector(".jm-rating"));
+            clearInterval(timer);
+          }
+      }, 500);
+    </script>
+  
+  <style>
+  .jdgm-rev-widg__summary-average {
+    display: none !important;
+    }
+    
+    .jm-rating {
+     font-size: 63px !important;
+     font-weight: 600 !important;
+    }
+    .jdgm-rev-widg__summary-inner {
+    text-align: center !important;
+    }
+  </style>
+  
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+    var totalNumRev = document.querySelector('.jdgm-rev-widg').getAttribute('data-number-of-reviews');
+     document.querySelectorAll('.jdgm-histogram__frequency').forEach(el => {
+     var numRev =  el.innerText;
+     var revFreq = (numRev/totalNumRev) * 100;
+     el.innerText = revFreq  + "%"
+     }) }, 500);
+    })
+    
+  </script>  
+  {% endif %}
+  <!-- JUDGE.ME Customization End -->  
 </body>
 </html>

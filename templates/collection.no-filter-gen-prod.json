@@ -14,14 +14,13 @@
       "blocks": {
         "banner": {
           "type": "banner",
-          "disabled": true,
           "settings": {
-            "heading": "Sommer Sale",
-            "text": "Mach dich bereit für die heißen Tage",
-            "link": "shopify:\/\/collections\/sale",
-            "label": "Los geht´s",
-            "color_tint": "#1e4274",
-            "color_tint_opacity": 10,
+            "heading": "Anmleden und 10% Sparen",
+            "text": "Melde dich bei unserem Newsletter an und erhalte einmalig 10% Rabatt auf deine erste Bestellung.",
+            "link": "",
+            "label": "Jetzt Anmleden",
+            "color_tint": "#89d9ff",
+            "color_tint_opacity": 20,
             "framed": false
           }
         },
@@ -54,13 +53,13 @@
       ],
       "settings": {
         "full_width": false,
-        "gutter_size": 30,
+        "gutter_size": 20,
         "space_above": true,
         "space_below": false
       }
     },
     "main-collection": {
-      "type": "main-collection",
+      "type": "main-collection-filter-gen-prod",
       "blocks": {
         "collection_description": {
           "type": "collection_description",
@@ -69,6 +68,7 @@
         },
         "subcollections": {
           "type": "subcollections",
+          "disabled": true,
           "settings": {
             "subcollections_per_row": 5
           }
@@ -96,30 +96,30 @@
         "enable_sort": true
       }
     },
-    "16590771752ed835fa": {
+    "16590760059a312fef": {
       "type": "newsletter",
       "blocks": {
-        "1659077175e1be7aa7-0": {
+        "1659076005fbc85526-0": {
           "type": "title",
           "settings": {
             "title": "Anmelden und 10% Sparen"
           }
         },
-        "1659077175e1be7aa7-1": {
+        "1659076005fbc85526-1": {
           "type": "text",
           "settings": {
             "text": "<p>Melde dich bei unserem Newsletter an und profitiere von exklusiven Angeboten, Giveaways, einmaligen Deals und 10% Rabatt auf deine erste Bestellung.<\/p>"
           }
         },
-        "1659077175e1be7aa7-2": {
+        "1659076005fbc85526-2": {
           "type": "form",
           "settings": {}
         }
       },
       "block_order": [
-        "1659077175e1be7aa7-0",
-        "1659077175e1be7aa7-1",
-        "1659077175e1be7aa7-2"
+        "1659076005fbc85526-0",
+        "1659076005fbc85526-1",
+        "1659076005fbc85526-2"
       ],
       "settings": {
         "color_background": "#e0f5ff",
@@ -131,6 +131,6 @@
     "collection-header",
     "promo-grid",
     "main-collection",
-    "16590771752ed835fa"
+    "16590760059a312fef"
   ]
 }

@@ -1158,3 +1158,10 @@
 	padding-bottom: 100%;
   }
   
+  @media screen and (min-width: 750px) {
+  .product__gallery-grid {
+    margin-left: 22px !important;
+    margin-right: -22px !important;
+  }
+ }
+

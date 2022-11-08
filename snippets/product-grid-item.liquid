@@ -78,7 +78,7 @@ Arguments
       assign img_url = preview_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.'
     -%}
 
-    <a href="{{ product.url | within: collection }}" class="grid-product__link product-link-{{ product.id }}">
+    <a href="{{ product.url }}" class="grid-product__link product-link-{{ product.id }}">
       <div class="grid-product__image-mask">
         {%- if quick_shop_enable -%}
           <div class="quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide">
@@ -223,10 +223,10 @@ Arguments
 <!-- End - Adjust code regardring to change image  -->
       <div class="grid-product__meta">
         <div class="grid-product__title grid-product__title--{{ settings.type_product_style }}">
-          <a href="{{ product.url | within: collection }}" class="grid-product__link product-link-{{ product.id }}">{{ product.title }}</a>
+          <a href="{{ product.url | within: collection }}" class="grid-product__link product-link-{{ product.id }}">{{ product.metafields.descriptors.subtitle }}</a>
         </div>
         <span class="color_name-{{ product.id }} tag-color-grid" >
-			{{ product.variants.first.option2 }}
+			{{ product.metafields.custom.farbe }}
 		   </span>
         {%- if settings.vendor_enable -%}
           <div class="grid-product__vendor">{{ product.vendor }}</div>

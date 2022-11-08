@@ -70,7 +70,9 @@
   
 	<div class="page-content page-content--product">
 	  <div class="page-width-1500">
-  
+        {%- if settings.show_breadcrumbs and isModal != true -%}	
+          {%- render 'breadcrumbs' -%}	
+        {%- endif -%}
 		<div class="grid{% unless image_position == 'left' %} grid--product-images-right{% endunless %}{% if mobile_layout == 'partial' %} grid--product-images--partial{% endif %} {% if product.media.size == 2 %}grid--2-col-media{% endif %} {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
 		  {%- if image_position == 'left' -%}
 			<div class="product__gallery-grid grid__item {{ product_image_width }} product-single__sticky">
@@ -95,8 +97,8 @@
 			<div class="product-single__meta">
 			  <div class="product-block product-block--header">
 				{%- if settings.show_breadcrumbs and isModal != true -%}
-				  {%- render 'breadcrumbs' -%}
-				{%- endif -%}
+				  <!--- {%- render 'breadcrumbs' -%}
+				{%- endif -%} --->
   
 				{%- if settings.vendor_enable -%}
 				  <div class="product-single__vendor">
@@ -106,19 +108,19 @@
 						{{ collections[vendor_handle].title }}
 					  </a>
 					{%- else -%}
-					  {{ product.vendor | link_to_vendor }}
+					  {{ product.vendor | link_to_vendor }} {{ product.variants.first.option1 }}
 					{%- endif -%}
 				  </div>
 				{%- endif -%}
   
 				{%- if isModal -%}
 				  <p class="h2 product-single__title">
-					{{ product.title }}
+					{{ product.metafields.descriptors.subtitle }}
 				  </p>
 				{%- else -%}
 				  <h1 class="h2 product-single__title">
 					{%- unless product.empty? -%}
-					  {{ product.title }}
+					  {{ product.metafields.descriptors.subtitle }}
 					{%- else -%}
 					  {{ 'home_page.onboarding.product_title' | t }}
 					{%- endunless -%}
@@ -336,6 +338,7 @@
 							></div>
 						{%- endif -%}
 					  </div>
+                    <div class='frcp-quick-view-placeholder' data-frcp-product-id='{{ product.id }}' data-frcp-product-handle='{{ product.handle }}'></div>
 					{%- when 'sales_point' -%}
 					  {%- unless block.settings.text == blank -%}
 						<div class="product-block product-block--sales-point" {{ block.shopify_attributes }}>

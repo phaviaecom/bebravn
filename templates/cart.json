@@ -7,7 +7,7 @@
     "recently-viewed": {
       "type": "recently-viewed",
       "settings": {
-        "recent_count": 10
+        "recent_count": 4
       }
     },
     "featured-collection": {
@@ -16,7 +16,7 @@
         "title": "B﻿eliebte Artikel",
         "home_featured_products": "clothes",
         "per_row": 4,
-        "rows": 4,
+        "rows": 1,
         "mobile_scrollable": true,
         "view_all": true,
         "divider": true

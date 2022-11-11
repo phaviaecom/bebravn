@@ -1,7 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
 <head>
-{% include "starapps-core" %}
 
 <script type="text/javascript">
   var framefenster = document.getElementsByTagName("iFrame");
@@ -283,5 +282,12 @@
   </script>  
   {% endif %}
   <!-- JUDGE.ME Customization End -->  
+
+{% include 'swymSnippet' %}
+
+
+<!-- Back in Stock helper snippet -->
+{% render 'back-in-stock-helper' %}
+<!-- End Back in Stock helper snippet -->
 </body>
 </html>

@@ -131,6 +131,7 @@ slider-component {
 	margin: 0 1.2rem;
 	display: flex;
 	min-width: 2rem;
+	justify-content: space-between;
   }
   
   @media screen and (max-width: 749px) {

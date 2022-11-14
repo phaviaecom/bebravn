@@ -1,0 +1,16 @@
+.btn-lg {
+    font-size: 13px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.25em !important;
+    font-weight: 600 !important;
+    border-radius: 3px !important;
+}
+
+.modal-title {
+    font-weight: 600 !important;
+}
+
+.close {
+    color: #000 !important;
+    font-weight: inherit !important;
+}

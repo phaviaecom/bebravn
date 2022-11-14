@@ -7,13 +7,6 @@
           "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
         },
-        "3ac519ad-301a-415c-b496-e60c6a59e82b": {
-          "type": "shopify:\/\/apps\/onvoard-reviews\/blocks\/star-rating\/97297b12-037b-43b6-a7e7-97ed4af751a9",
-          "disabled": true,
-          "settings": {
-            "app_id": "star_dq8g1y2ud33aujx"
-          }
-        },
         "b79c3e75-ca7e-4a08-95db-5b98795a6daf": {
           "type": "text",
           "settings": {
@@ -34,6 +27,12 @@
             "show_dynamic_product_related": true
           }
         },
+        "01624e4c-00a9-48af-9af1-f7d9aded2f6b": {
+          "type": "size_chart",
+          "settings": {
+            "size_chart": "grossentabelle-kleidung-herren"
+          }
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -42,11 +41,11 @@
             "color_swatches": true
           }
         },
-        "01624e4c-00a9-48af-9af1-f7d9aded2f6b": {
-          "type": "size_chart",
+        "721cd0a6-4fb8-491c-b6a1-04b6457e845f": {
+          "type": "custom",
           "disabled": true,
           "settings": {
-            "size_chart": "grossentabelle-kleidung-herren"
+            "code": "<a class=\"klaviyo-bis-trigger\" href=\"#\">Notify Me When Available<\/a>"
           }
         },
         "8093feb1-31a3-4627-8a3c-93d5b2b5c065": {
@@ -60,12 +59,6 @@
           "settings": {
             "inventory_threshold": 10,
             "inventory_transfers_enable": true
-          }
-        },
-        "b288b161-62cc-4e7a-a284-5500d29f5cbf": {
-          "type": "shopify:\/\/apps\/onvoard-back-in-stock\/blocks\/inline-form\/38621407-cf66-484e-b0c5-088b87e2729e",
-          "settings": {
-            "app_id": "bis_6635e4hf5ry33bs"
           }
         },
         "buy_buttons": {
@@ -149,16 +142,15 @@
       },
       "block_order": [
         "judgeme_preview_badge_product_page_a5909f99",
-        "3ac519ad-301a-415c-b496-e60c6a59e82b",
         "b79c3e75-ca7e-4a08-95db-5b98795a6daf",
         "price",
         "482cd553-9072-46f0-aabb-90ece19344a8",
         "caa80da2-3735-47bc-a934-97392e1ee8af",
-        "variant_picker",
         "01624e4c-00a9-48af-9af1-f7d9aded2f6b",
+        "variant_picker",
+        "721cd0a6-4fb8-491c-b6a1-04b6457e845f",
         "8093feb1-31a3-4627-8a3c-93d5b2b5c065",
         "inventory_status",
-        "b288b161-62cc-4e7a-a284-5500d29f5cbf",
         "buy_buttons",
         "dd7488b0-0e3b-43fa-9458-f5bf89fac4d7",
         "1fa0dc4a-ccf4-4e31-a5e6-e3a8f621e833",
@@ -221,18 +213,6 @@
     },
     "1664518585f4b165b7": {
       "type": "apps",
-      "blocks": {
-        "272d52ea-cc84-4ffb-ac9d-f9e64babcd2d": {
-          "type": "shopify:\/\/apps\/onvoard-reviews\/blocks\/reviews-widget\/97297b12-037b-43b6-a7e7-97ed4af751a9",
-          "disabled": true,
-          "settings": {
-            "app_id": "rwget_qkae8ty12fa1bwz"
-          }
-        }
-      },
-      "block_order": [
-        "272d52ea-cc84-4ffb-ac9d-f9e64babcd2d"
-      ],
       "settings": {
         "full_width": false,
         "space_around": true

@@ -329,7 +329,13 @@
       "view_in_space": "In Ihrem Bereich ansehen",
       "view_in_space_label": "„Ansicht in Ihrem Raum“ lädt den Artikel im Augmented-Reality-Fenster",
       "colors_singular": "Farbe",
-      "colors_plural": "Farben"
+      "colors_plural": "Farben",
+      "klaviyo_product_page_text": "Grösse ausverkauft?",
+      "klaviyo_body_content": "Wähle unten die ausverkaufte Größe und fülle deine Daten aus. Wir benachrichtigen dich, wenn der Artikel wieder verfügbar ist.",
+      "klaviyo_newsletter_subscribe_label": "Ich würde gerne Marketing E-Mails von BRAVN erhalten.",
+      "klaviyo_button_label": "Benachrichtige mich",
+      "klaviyo_footer_content": "Durch das Angeben deiner E-Mail-Adresse stimmst du der Datenschutzerklärung von BRAVN zu.",
+      "klaviyo_subscription_success_label": "Du bist drin! Wir lassen dich wissen, wenn der Artikel wieder verfügbar ist."
     }
   },
   "store_availability": {

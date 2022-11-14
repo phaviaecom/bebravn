@@ -12137,11 +12137,7 @@ color: #000000 !important;
   color: #545454 !important;
 }
 
-.frcp-login__title{
-  letter-spacing: 0.1em;
-  font-weight: 600 !important;
-  font-size: 16px !important;
-}
+
 
 .frcp-address__default {
   border-radius: 3px;
@@ -12463,7 +12459,7 @@ color: #000000 !important;
     margin-bottom: 15px !important;
 }
 
-/* BRAVN - Adjustments Main Product Page - 11 December '22 */
+/* BRAVN - Adjustments Main Product Page - 21 October '22 */
   
 .product-single__vendor {
     pointer-events: none !important;
@@ -12546,4 +12542,38 @@ color: #000000 !important;
 
 .collection-sidebar-gen-prod__group--6 {
     border-top: 1px solid #e8e8e1 !important;
+}
+
+/* BRAVN - Klaviyo - 13 November '22 */
+
+.klaviyo-bis-trigger {
+    display: inline-block !important;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: .08em;
+    font-weight: var(--typeBaseWeight);
+    border-bottom: 1px solid !important;
+    border-bottom-color: #d9d9d9 !important;
+}
+
+.klaviyo-bis-trigger:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #000000;  
+    transform: scaleX(0);  
+    transition: transform 600ms ease-in-out;
+    transform-origin: 0% 50%;
+}
+
+.klaviyo-bis-trigger:hover:after {
+    transform: scaleX(1); transform-origin:   0% 50%;
+}
+
+.variant-input-wrap[data-index=option3] {
+    margin-bottom: -30px !important;
+}
+
+.add-to-cart {
+    margin-top: 30px !important;
 }

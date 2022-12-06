@@ -87,11 +87,10 @@ $(document).ready(() => {
 		setVariants();
 	 }
 
-	 if(window.location.href.includes('/pages/test-return-page')){
-         console.log("hello world");
+	 //Change the iframe's height when the page reload
+	 if(window.location.href.includes('/pages/returns')){
 		 $('#retouren-portal').on('load', (e) => {
 			autoResize(e.target);
-			console.log("Loaded");
 		 })
 		 function autoResize(iframe) {
 			$(iframe).height($(iframe).contents().find('html').height());

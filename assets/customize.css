@@ -256,3 +256,8 @@
 html, body { 
     scroll-behavior: smooth
 }
+@media only screen and (min-width: 768px){
+    .customize-retoure .page-content{
+        padding-bottom: 10px;
+    }
+}

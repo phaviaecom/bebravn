@@ -204,47 +204,19 @@
     });
   </script>
 
-
-  
-<script>
- jQuery(document).ready(function(){
-   //------iwish 2.0 counter hide show: -------
-      setTimeout(function(){
-        var iwC1 = $('.iw-link__count').text();
-        //console.log("iwC1: ",iwC1);
-        if(iwC1>0){ $('.iw-link__count').show();}
-        else { $('.iw-link__count').hide(); }
-      },2000);
-        jQuery("body").on("click",".iWishAdd, .iWishAddColl, .iwish-backdrop,.iwish_drawer_close",function(){
-           $('.hc-error').css('display', 'none');
-   		   setTimeout(function(){
-    		   var iwC1 = jQuery('.iw-link__count').text();
-        //console.log("iwC1click: "+iwC1);
-               if(iwC1>0){ jQuery('.iw-link__count').show();}
-               else { jQuery('.iw-link__count').hide(); }
-           },500);
-         });
-
-        jQuery("body").on("click",".iwish-float-icon",function(){
-             jQuery('.react-col-1.hover.wish-h1').html('<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"></path></svg>');
-         });
-    })
-  </script>
-
 <!-- HC - Mandatory size selection - 07 September '22 -->
   {{ 'hc-validations.js' | asset_url | script_tag }}
-{% include "onvoard-appscripts" %}
 
   <!-- JUDGE.ME Customization Start -->
    {% if template contains "product" %}
   <div style="display: none !important">
-    <div class="jm-rating">
-      {{ product.metafields.reviews.rating.value }}
-    </div>
+    <div class="jm-rating"></div>
   </div>
   
     <script>
       var timer = setInterval(function() {
+          var AvgRating = document.querySelector(".jdgm-rev-widg").getAttribute("data-average-rating");
+         document.querySelector(".jm-rating").innerText = AvgRating
           var container = document.querySelector(".jdgm-rev-widg__summary");
           if (container) {
             container.prepend(document.querySelector(".jm-rating"));
@@ -254,10 +226,9 @@
     </script>
   
   <style>
-  .jdgm-rev-widg__summary-average {
-    display: none !important;
+    .jdgm-rev-widg__summary-average {
+    display: none !important
     }
-    
     .jm-rating {
      font-size: 63px !important;
      font-weight: 600 !important;
@@ -289,7 +260,6 @@
     var klaviyo = klaviyo || [];
     klaviyo.init({
       account: "QRHViV",
-      list: 'TZqqsq',
       platform: "shopify"
     });
     klaviyo.enable("backinstock",{ 
@@ -302,11 +272,9 @@
       replace_anchor: false
     },
     modal: {
-     newsletter_subscribe_label: "{{ "products.product.klaviyo_newsletter_subscribe_label" | t }}",
-     subscribe_checked: false,
      headline: "{product_name}",
      body_content: "{{ "products.product.klaviyo_body_content" | t }}",
-     email_field_label: "Email",
+     email_field_label: "{{ "products.product.klaviyo_email_field_label" | t }}",
      button_label: "{{ "products.product.klaviyo_button_label" | t }}",
      subscription_success_label: "{{ "products.product.klaviyo_subscription_success_label" | t }}",
      footer_content: "{{ "products.product.klaviyo_footer_content" | t }}",
@@ -326,5 +294,10 @@
 </script>
 <!-- End Klaviyo Back in Stock snippet -->
   
+  <style>
+  .jdgm-rev-widg[data-number-of-reviews="0"] .jm-rating {
+  display: none !important;
+  }
+  </style>
 </body>
 </html>

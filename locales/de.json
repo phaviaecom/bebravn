@@ -8,7 +8,21 @@
       "skip_to_content": "Direkt zum Inhalt",
       "close_modal": "Schließen (Esc)",
       "close": "Schließen",
-      "learn_more": "Erfahren Sie mehr"
+      "learn_more": "Erfahren Sie mehr",
+      "skip_to_text": "",
+      "skip_to_product_info": "",
+      "unit_price_separator": "",
+      "vendor": "",
+      "error": "",
+      "refresh_page": "",
+      "link_messages": {
+        "new_window": "",
+        "external": ""
+      },
+      "loading": "",
+      "total_reviews": "",
+      "star_reviews_info": "",
+      "collapsible_content_title": ""
     },
     "meta": {
       "tags": "Getaggt \"{{ tags }}\"",
@@ -74,6 +88,11 @@
     },
     "language": {
       "dropdown_label": "Sprache"
+    },
+    "slider": {
+      "of": "",
+      "next_slide": "",
+      "previous_slide": ""
     }
   },
   "sections": {
@@ -138,7 +157,7 @@
   },
   "collections": {
     "general": {
-      "catalog_title": "Katalog",
+      "catalog_title": "Kollektionen",
       "all_of_collection": "Alle",
       "view_all_products_html": "zeige alle<br>{{ count }} Produkte an",
       "see_more": "Zeig mehr",
@@ -332,10 +351,21 @@
       "colors_plural": "Farben",
       "klaviyo_product_page_text": "Grösse ausverkauft?",
       "klaviyo_body_content": "Wähle unten die ausverkaufte Größe und fülle deine Daten aus. Wir benachrichtigen dich, wenn der Artikel wieder verfügbar ist.",
+      "klaviyo_email_field_label": "Email Adresse",
       "klaviyo_newsletter_subscribe_label": "Ich würde gerne Marketing E-Mails von BRAVN erhalten.",
       "klaviyo_button_label": "Benachrichtige mich",
       "klaviyo_footer_content": "Durch das Angeben deiner E-Mail-Adresse stimmst du der Datenschutzerklärung von BRAVN zu.",
-      "klaviyo_subscription_success_label": "Du bist drin! Wir lassen dich wissen, wenn der Artikel wieder verfügbar ist."
+      "klaviyo_subscription_success_label": "Du bist drin! Wir lassen dich wissen, wenn der Artikel wieder verfügbar ist.",
+      "media": {
+        "gallery_viewer": "",
+        "load_image": "",
+        "load_model": "",
+        "load_video": "",
+        "image_available": "",
+        "open_media": "",
+        "play_model": "",
+        "play_video": ""
+      }
     }
   },
   "store_availability": {
@@ -403,6 +433,9 @@
         "optional_address2_label": "DHL Postnummer, Wohnung, Zimmer, usw. (optional)",
         "address1_label": "Straße oder Packstation Nr. (Beispiel: Packstation 150)"
       }
+    },
+    "page_titles": {
+      "collections": "Kollektionen"
     }
   },
   "product_block": {

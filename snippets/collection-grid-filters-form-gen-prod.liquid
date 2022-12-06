@@ -88,7 +88,7 @@
                       {%- else -%}
                       <span class="tag__checkbox"></span>
                       <span>
-                          <span class="tag__text">{{ filter_value.label | escape }}</span> ({{ filter_value.count }})
+                          <span class="tag__text">{{ filter_value.label | escape }}</span> <!-- ({{ filter_value.count }}) -->
                       </span>
                       {%- endif -%}
                   </label>

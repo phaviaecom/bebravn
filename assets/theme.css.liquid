@@ -5091,7 +5091,7 @@ form+.footer__social{
   background-color:{{ settings.color_body_bg | default: "#fff" }};
   background-color:var(--colorBody);
   min-width:100%;
-  padding:10px 0 5px;
+  padding:10px 0 10px;
   box-shadow:0px 10px 20px rgba(0, 0, 0, 0.09);
   transform:translate3d(0px, -12px, 0px)
 }
@@ -12137,7 +12137,13 @@ color: #000000 !important;
   color: #545454 !important;
 }
 
-
+.frcp-login__title {
+  color: #000 !important;
+  text-transform: none !important;
+  letter-spacing: 0.05em;
+  font-weight: 100 !important;
+  font-size: 16px !important;
+}
 
 .frcp-address__default {
   border-radius: 3px;
@@ -12459,6 +12465,15 @@ color: #000000 !important;
     margin-bottom: 15px !important;
 }
 
+.jdgm-rev__buyer-badge {
+    background-color: #ffcf34 !important;
+    border: 2px solid #ffcf34 !important;
+    border-radius: 3px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    letter-spacing: .1em !important;
+}
+  
 /* BRAVN - Adjustments Main Product Page - 21 October '22 */
   
 .product-single__vendor {
@@ -12474,12 +12489,12 @@ color: #000000 !important;
 
 .site-nav__dropdown-link--top-level {
     pointer-events: none !important;
-    cursor: text !important;
+    cursor: default !important;
 }
 
 .megamenu__colection-image {
     pointer-events: none !important;
-    cursor: text !important;
+    cursor: default !important;
 }
 
 .modal__close .icon {
@@ -12576,4 +12591,10 @@ color: #000000 !important;
 
 .add-to-cart {
     margin-top: 30px !important;
+}
+
+@media only screen and (min-width: 768px){
+.jdgm-histogram__frequency {
+    width: 18px;
+}
 }

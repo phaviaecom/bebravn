@@ -28,7 +28,7 @@
         "241ee7e0-d83f-4e0a-a84c-29e5ca004ed9"
       ],
       "settings": {
-        "title_enable": false,
+        "title_enable": true,
         "display_type": "selected",
         "sort": "alphabetical",
         "grid": "3"

@@ -1,29 +1,44 @@
-<div id="QuickShopModal-{{ product.id }}" class="modal modal--square modal--quick-shop" data-product-id="{{ product.id }}">
+<div
+  id="QuickShopModal-{{ product.id }}"
+  class="modal modal--square modal--quick-shop"
+  data-product-id="{{ product.id }}">
   <div class="modal__inner">
     <div class="modal__centered">
       <div class="modal__centered-content">
         <div id="QuickShopHolder-{{ product.handle }}"></div>
+        <!--Klavyo-Collection-->
+        <div
+          class='klaviyo-product-container'
+          id='klaviyo-data-handle-{{ product.handle }}'
+          data-klaviyo-handle='{{ product.handle }}'>
+          <div class="klaviyo-button-container"></div>
+        </div>
       </div>
 
       <button type="button" class="modal__close js-modal-close text-link">
-        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          role="presentation"
+          class="icon icon-close"
+          viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" /></svg>
         <span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t | json }}</span>
       </button>
     </div>
   </div>
 </div>
 {%- style -%}
-  #QuickShopModal-{{ product.id }} .product__main-photos .product-slideshow{
+  #QuickShopModal-{{ product.id }}.product__main-photos .product-slideshow {
     display: block;
   }
-  #QuickShopModal-{{ product.id }} .product__main-photos .product__main-photo{
+  #QuickShopModal-{{ product.id }}.product__main-photos .product__main-photo {
     display: none;
   }
-  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item.product__thumb-item-featured{
+  #QuickShopModal-{{ product.id }}.product__thumbs .product__thumb-item.product__thumb-item-featured {
     display: block !important;
   }
-  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item a.is-active:before, 
-  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item a:focus:before{
+  #QuickShopModal-{{ product.id }}.product__thumbs .product__thumb-item a.is-active:before,
+  #QuickShopModal-{{ product.id }}.product__thumbs .product__thumb-item a:focus:before {
     content: "";
     display: block;
     position: absolute;

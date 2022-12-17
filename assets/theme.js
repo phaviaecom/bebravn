@@ -7348,7 +7348,11 @@ lazySizesConfig.expFactor = 4;
         if (!this.settings.modalInit) {
           this.blocksHolder = this.container.querySelector(selectors.blocksHolder);
           var url = this.blocksHolder.dataset.url;
-  
+          let handle = this.blocksHolder.dataset.url.split('/');
+          handle = handle[handle.length -1];
+          let idKlavyo = `klaviyo-data-handle-${handle}`;
+          document.getElementById(`${idKlavyo}`).style.display = 'none';
+
           fetch(url).then(function(response) {
             return response.text();
           }).then(function(html) {
@@ -7359,7 +7363,7 @@ lazySizesConfig.expFactor = 4;
             // Because the same product could be opened in quick view
             // on the page we load the form elements from, we need to
             // update any `id`, `for`, and `form` attributes
-            blocks.querySelectorAll('[id]').forEach(el => {
+            blocks.querySelectorAll('[id]:not([id="klaviyo-bis-trigger"])').forEach(el => {
               // Update input `id`
               var val = el.getAttribute('id');
               el.setAttribute('id', val + '-modal');
@@ -7410,6 +7414,13 @@ lazySizesConfig.expFactor = 4;
   
           this.productSetup();
           this.videoSetup();
+
+          document.addEventListener('quickview:loaded', function(evt) {
+             // Load klaviyo
+             document.getElementById("klaviyo-bis-trigger").appendChild(document.getElementById(`${idKlavyo}`));
+             document.getElementById(`${idKlavyo}`).style.display = 'block';
+             document.getElementById("klaviyo-bis-trigger").style.minHeight = '30px';
+          }.bind(this));
   
           // Enable product slider in quick view
           // 1. with image sets enabled, make sure we have this.variants before initializing

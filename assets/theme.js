@@ -7420,6 +7420,13 @@ lazySizesConfig.expFactor = 4;
              document.getElementById("klaviyo-bis-trigger").appendChild(document.getElementById(`${idKlavyo}`));
              document.getElementById(`${idKlavyo}`).style.display = 'block';
              document.getElementById("klaviyo-bis-trigger").style.minHeight = '30px';
+             if (document.querySelectorAll(`#${idKlavyo} .klaviyo-button-container .klaviyo-bis-trigger`).length > 1){
+              document.querySelectorAll(`#${idKlavyo} .klaviyo-button-container .klaviyo-bis-trigger`).forEach((elm, key) => {
+                  if(key != 0){
+                      elm.remove();
+                  }
+              });
+             }
           }.bind(this));
   
           // Enable product slider in quick view

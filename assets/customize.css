@@ -273,3 +273,7 @@ html, body {
     top: 0 !important;
     left: 0 !important;
 }
+#klaviyo-bis-trigger .klaviyo-button-container .klaviyo-bis-trigger{
+    background-color: transparent !important;
+    color: #000000 !important;
+}

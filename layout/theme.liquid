@@ -8,19 +8,19 @@
     <script type="text/javascript">
       var framefenster = document.getElementsByTagName("iFrame");
       if(framefenster.length > 0) {
-                                              var auto_resize_timer = window.setInterval("autoresize_frames()", 400);
-                                              function autoresize_frames() {
-                                                for (var i = 0; i < framefenster.length; ++i) {
-                                                    if(framefenster[i].contentWindow.document.body){
-                                                      var framefenster_size = framefenster[i].contentWindow.document.body.offsetHeight;
-                                                      if(document.all && !window.opera) {
-                                                        framefenster_size = framefenster[i].contentWindow.document.body.scrollHeight;
-                                                      }
-                                                      framefenster[i].style.height = framefenster_size + 'px';
-                                                    }
-                                                }
-                                              }
-                                            }
+          var auto_resize_timer = window.setInterval("autoresize_frames()", 400);
+          function autoresize_frames() {
+            for (var i = 0; i < framefenster.length; ++i) {
+                if(framefenster[i].contentWindow.document.body){
+                  var framefenster_size = framefenster[i].contentWindow.document.body.offsetHeight;
+                  if(document.all && !window.opera) {
+                    framefenster_size = framefenster[i].contentWindow.document.body.scrollHeight;
+                  }
+                  framefenster[i].style.height = framefenster_size + 'px';
+                }
+            }
+          }
+        }
     </script>
     {% include "load-metafields" %}
 
@@ -276,7 +276,11 @@
     <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
     <script>
       var klaviyo = klaviyo || [];
-      klaviyo.init({account: "QRHViV", platform: "shopify", collection_urls: ["/collections/"]});
+      klaviyo.init({
+        account: "QRHViV",
+        platform: "shopify",
+        collection_urls: ["/collections/", "/"]
+      });
       klaviyo.enable("backinstock", {
         trigger: {
           product_page_text: "{{ "products.product.klaviyo_product_page_text" | t }}",
@@ -293,7 +297,7 @@
           button_label: "{{ "products.product.klaviyo_button_label" | t }}",
           subscription_success_label: "{{ "products.product.klaviyo_subscription_success_label" | t }}",
           footer_content: "{{ "products.product.klaviyo_footer_content" | t }}",
-          additional_styles: "@import url(' {{ 'klaviyo-bis-modal.css' | asset_url }} ');",
+          additional_styles: "@import url('        {{ 'klaviyo-bis-modal.css' | asset_url }} ');",
           drop_background_color: "#000",
           background_color: "#fff",
           text_color: "#222",
@@ -308,10 +312,10 @@
       });
       klaviyo.enable("backinstock", {
         trigger: {
+          collection_page_text: "{{ "products.product.klaviyo_product_page_text" | t }}",
           collection_page_class: 'text',
           collection_page_text_align: 'center',
           collection_page_width: '200px',
-          collection_page_text: 'Size sold out?',
           collection_page_padding: 'inherit'
         },
         modal: {
@@ -321,7 +325,7 @@
           button_label: "{{ "products.product.klaviyo_button_label" | t }}",
           subscription_success_label: "{{ "products.product.klaviyo_subscription_success_label" | t }}",
           footer_content: "{{ "products.product.klaviyo_footer_content" | t }}",
-          additional_styles: "@import url(' {{ 'klaviyo-bis-modal.css' | asset_url }} ');",
+          additional_styles: "@import url('        {{ 'klaviyo-bis-modal.css' | asset_url }} ');",
           drop_background_color: "#000",
           background_color: "#fff",
           text_color: "#222",

@@ -7414,20 +7414,23 @@ lazySizesConfig.expFactor = 4;
   
           this.productSetup();
           this.videoSetup();
+          
+          if(document.location.href.includes('/collections')){
+            document.addEventListener('quickview:loaded', function(evt) {
+              // Load klaviyo
+              document.getElementById("klaviyo-bis-trigger").appendChild(document.getElementById(`${idKlavyo}`));
+              document.getElementById(`${idKlavyo}`).style.display = 'block';
+              document.getElementById("klaviyo-bis-trigger").style.minHeight = '30px';
+              if (document.querySelectorAll(`#${idKlavyo} .klaviyo-button-container .klaviyo-bis-trigger`).length > 1){
+                document.querySelectorAll(`#${idKlavyo} .klaviyo-button-container .klaviyo-bis-trigger`).forEach((elm, key) => {
+                    if(key != 0){
+                        elm.remove();
+                    }
+                });
+              }
 
-          document.addEventListener('quickview:loaded', function(evt) {
-             // Load klaviyo
-             document.getElementById("klaviyo-bis-trigger").appendChild(document.getElementById(`${idKlavyo}`));
-             document.getElementById(`${idKlavyo}`).style.display = 'block';
-             document.getElementById("klaviyo-bis-trigger").style.minHeight = '30px';
-             if (document.querySelectorAll(`#${idKlavyo} .klaviyo-button-container .klaviyo-bis-trigger`).length > 1){
-              document.querySelectorAll(`#${idKlavyo} .klaviyo-button-container .klaviyo-bis-trigger`).forEach((elm, key) => {
-                  if(key != 0){
-                      elm.remove();
-                  }
-              });
-             }
-          }.bind(this));
+            }.bind(this));
+          }
   
           // Enable product slider in quick view
           // 1. with image sets enabled, make sure we have this.variants before initializing

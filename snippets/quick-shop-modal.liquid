@@ -7,12 +7,14 @@
       <div class="modal__centered-content">
         <div id="QuickShopHolder-{{ product.handle }}"></div>
         <!--Klavyo-Collection-->
-        <div
-          class='klaviyo-product-container'
-          id='klaviyo-data-handle-{{ product.handle }}'
-          data-klaviyo-handle='{{ product.handle }}'>
-          <div class="klaviyo-button-container"></div>
-        </div>
+        {% if product.available %}
+          <div
+            class='klaviyo-product-container'
+            id='klaviyo-data-handle-{{ product.handle }}'
+            data-klaviyo-handle='{{ product.handle }}'>
+            <div class="klaviyo-button-container"></div>
+          </div>
+        {% endif %}
       </div>
 
       <button type="button" class="modal__close js-modal-close text-link">

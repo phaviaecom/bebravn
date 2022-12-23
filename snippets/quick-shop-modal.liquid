@@ -7,14 +7,14 @@
       <div class="modal__centered-content">
         <div id="QuickShopHolder-{{ product.handle }}"></div>
         <!--Klavyo-Collection-->
-        {% if product.available %}
+        {% comment %} {% if product.available %}
           <div
             class='klaviyo-product-container'
             id='klaviyo-data-handle-{{ product.handle }}'
             data-klaviyo-handle='{{ product.handle }}'>
             <div class="klaviyo-button-container"></div>
           </div>
-        {% endif %}
+        {% endif %} {% endcomment %}
       </div>
 
       <button type="button" class="modal__close js-modal-close text-link">
@@ -29,6 +29,17 @@
     </div>
   </div>
 </div>
+<div id="Klaviyo-selection-{{ product.id }}" data-handle="{{ product.title }}">
+  <input type="hidden" id="product" value="{{ product.id }}">
+  <select id="klaviyo_variants" class="selectpicker form-control input-lg">
+    {% for variant in product.variants %}
+      {% unless variant.available %}
+        <option value="{{ variant.id }}">{{ variant.title }}</option>
+      {% endunless %}
+    {% endfor %}  
+  </select>
+</div>
+
 {%- style -%}
   #QuickShopModal-{{ product.id }}.product__main-photos .product-slideshow {
     display: block;

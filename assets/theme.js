@@ -7525,22 +7525,16 @@ lazySizesConfig.expFactor = 4;
 
           document.addEventListener('quickview:loaded', function (evt) {
             // Load klaviyo
-            // console.log(evt.target.activeElement)
             let idProductQuickview = evt.target.activeElement.getAttribute('data-product-id');
-            // console.log(idProductQuickview);
+
             if(evt.target.activeElement.dataset.available != 0){
               evt.target.activeElement.querySelector('#quickview-trigger-klaviyo').classList.remove('hide');
             }
             evt.target.activeElement.querySelector('#quickview-trigger-klaviyo')?.addEventListener('click', (e) => {
               e.preventDefault();
               let productID = e.target.getAttribute('data-product-id');
-              let options = `Klaviyo-selection-${productID}`;
               document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.contains('hide') ? document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.remove('hide') : '';
               document.querySelector('body').style.overflow = 'hidden';
-
-              // let titleProduct = document.getElementById(`${options}`).getAttribute('data-handle');
-              // document.getElementById('klaviyo_modal_title').text = titleProduct;
-              // document.getElementById('klaviyo_variant_select').innerHTML = document.getElementById(`${options}`).innerHTML;
 
               let variantOption = document.getElementById(`klaviyo_variants-${productID}`).value;
               let emailSubcriber = '';
@@ -7557,9 +7551,6 @@ lazySizesConfig.expFactor = 4;
 
               document.getElementById(`btn_email_subcriber-${productID}`).addEventListener('click', (event) => {
                 event.preventDefault();
-                console.log(variantOption);
-                console.log(emailSubcriber);
-                // console.log(emailSubcriber);
                 if (regexEmail.test(emailSubcriber)) {
                 
                   var formdata = new FormData();
@@ -7590,7 +7581,6 @@ lazySizesConfig.expFactor = 4;
                   console.log("error Email");
                 }
               })
-
               document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).querySelectorAll('.klaviyo-bis-close').forEach((elm) => {
                 elm.addEventListener('click', (e) => {
                   e.preventDefault();
@@ -7599,7 +7589,6 @@ lazySizesConfig.expFactor = 4;
                   document.querySelector('body').style.overflow = 'unset';
                 })
               });
-
               document.getElementById('overlay-background').classList.contains('hide') ? document.getElementById('overlay-background').classList.remove('hide') : '';
               document.getElementById('overlay-background').addEventListener('click', (e) => {
                 !document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.contains('hide') ? document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.add('hide') : '';

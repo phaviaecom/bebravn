@@ -3814,7 +3814,7 @@ lazySizesConfig.expFactor = 4;
       const toolTipOpen = new CustomEvent('tooltip:open', {
         detail: {
           context: this.dataset.toolTip,
-          content: this.toolTipContent.innerHTML
+          content: this.toolTipContent ? this.toolTipContent.innerHTML : ''
         },
         bubbles: true
       });
@@ -7471,7 +7471,7 @@ lazySizesConfig.expFactor = 4;
             // Because the same product could be opened in quick view
             // on the page we load the form elements from, we need to
             // update any `id`, `for`, and `form` attributes
-            blocks.querySelectorAll('[id]').forEach(el => {
+            blocks.querySelectorAll('[id]:not([id="quickview-trigger-klaviyo"])').forEach(el => {
               // Update input `id`
               var val = el.getAttribute('id');
               el.setAttribute('id', val + '-modal');
@@ -7525,46 +7525,43 @@ lazySizesConfig.expFactor = 4;
 
           document.addEventListener('quickview:loaded', function (evt) {
             // Load klaviyo
-            // document.getElementById("klaviyo-bis-trigger-modal").appendChild(document.getElementById(`${idKlavyo}`));
-            // document.getElementById(`${idKlavyo}`).style.display = 'block';
-            // document.getElementById("klaviyo-bis-trigger-modal").style.minHeight = '30px';
-            // if (document.querySelectorAll(`#${idKlavyo} .klaviyo-button-container .klaviyo-bis-trigger`).length > 1) {
-            //   document.querySelectorAll(`#${idKlavyo} .klaviyo-button-container .klaviyo-bis-trigger`).forEach((elm, key) => {
-            //     if (key != 0) {
-            //       elm.remove();
-            //     }
-            //   });
-            // }
-
-            document.getElementById('quickview-trigger-klaviyo-modal').addEventListener('click', (e) => {
+            // console.log(evt.target.activeElement)
+            let idProductQuickview = evt.target.activeElement.getAttribute('data-product-id');
+            // console.log(idProductQuickview);
+            if(evt.target.activeElement.dataset.available != 0){
+              evt.target.activeElement.querySelector('#quickview-trigger-klaviyo').classList.remove('hide');
+            }
+            evt.target.activeElement.querySelector('#quickview-trigger-klaviyo')?.addEventListener('click', (e) => {
               e.preventDefault();
               let productID = e.target.getAttribute('data-product-id');
               let options = `Klaviyo-selection-${productID}`;
-              document.getElementById('klaviyo-bis-modal-quick-view').classList.contains('hide') ? document.getElementById('klaviyo-bis-modal-quick-view').classList.remove('hide') : '';
+              document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.contains('hide') ? document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.remove('hide') : '';
+              document.querySelector('body').style.overflow = 'hidden';
 
-              let titleProduct = document.getElementById(`${options}`).getAttribute('data-handle');
-              document.getElementById('klaviyo_modal_title').text = titleProduct;
-              document.getElementById('klaviyo_variant_select').innerHTML = document.getElementById(`${options}`).innerHTML;
+              // let titleProduct = document.getElementById(`${options}`).getAttribute('data-handle');
+              // document.getElementById('klaviyo_modal_title').text = titleProduct;
+              // document.getElementById('klaviyo_variant_select').innerHTML = document.getElementById(`${options}`).innerHTML;
 
-              let variantOption = document.getElementById('klaviyo_variants').value;
+              let variantOption = document.getElementById(`klaviyo_variants-${productID}`).value;
               let emailSubcriber = '';
               let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-              document.getElementById('klaviyo-bis-modal-quick-view').querySelector('#klaviyo_variants').addEventListener('change', (e) => {
-                console.log(e.target.value);
+              document.getElementById(`klaviyo_variants-${productID}`).addEventListener('change', (e) => {
+                //console.log(e.target.value);
                 variantOption = e.target.value;
               })
 
-              document.getElementById('klaviyo-bis-modal-quick-view').querySelector('#klaviyo_email').addEventListener('change', (e) => {
+              document.getElementById(`klaviyo_email-${productID}`).addEventListener('change', (e) => {
                 emailSubcriber = e.target.value;
               })
 
-              document.getElementById('btn_email_subcriber').addEventListener('click', (e) => {
-                e.preventDefault();
+              document.getElementById(`btn_email_subcriber-${productID}`).addEventListener('click', (event) => {
+                event.preventDefault();
+                console.log(variantOption);
+                console.log(emailSubcriber);
+                // console.log(emailSubcriber);
                 if (regexEmail.test(emailSubcriber)) {
-                  console.log(variantOption);
-                  console.log(emailSubcriber);
-
+                
                   var formdata = new FormData();
                   formdata.append("a", "QRHViV");
                   formdata.append("email", `${emailSubcriber}`);
@@ -7584,7 +7581,10 @@ lazySizesConfig.expFactor = 4;
                   fetch('https://a.klaviyo.com/api/v1/catalog/subscribe', requestOptions)
                     .then(response => response.text())
                     .then(result => {
-                      console.log(result)
+                      console.log(result);
+                      !document.getElementById(`btn_email_subcriber-${productID}`).classList.contains('hide') ? document.getElementById(`btn_email_subcriber-${productID}`).classList.add('hide') : '';
+                      //completed_message
+                      document.getElementById(`completed_message-${productID}`).classList.contains('hide') ? document.getElementById(`completed_message-${productID}`).classList.remove('hide') : '';
                     })
                     .catch(error => console.log('error', error));
                 } else {
@@ -7592,14 +7592,23 @@ lazySizesConfig.expFactor = 4;
                 }
               })
 
+              document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).querySelectorAll('.klaviyo-bis-close').forEach((elm) => {
+                elm.addEventListener('click', (e) => {
+                  e.preventDefault();
+                  !document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.contains('hide') ? document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.add('hide') : '';
+                  !document.getElementById('overlay-background').classList.contains('hide') ? document.getElementById('overlay-background').classList.add('hide') : '';
+                  document.querySelector('body').style.overflow = 'unset';
+                })
+              });
+
+              document.getElementById('overlay-background').classList.contains('hide') ? document.getElementById('overlay-background').classList.remove('hide') : '';
+              document.getElementById('overlay-background').addEventListener('click', (e) => {
+                !document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.contains('hide') ? document.getElementById(`klaviyo-bis-modal-quick-view-${productID}`).classList.add('hide') : '';
+                !document.getElementById('overlay-background').classList.contains('hide') ? document.getElementById('overlay-background').classList.add('hide') : '';
+                document.querySelector('body').style.overflow = 'unset';
+              })
+
             })
-
-            document.getElementById('klaviyo-bis-modal-quick-view').querySelector('.close').addEventListener('click', (e) => {
-              !document.getElementById('klaviyo-bis-modal-quick-view').classList.contains('hide') ? document.getElementById('klaviyo-bis-modal-quick-view').classList.add('hide') : '';
-            })
-
-
-
 
           }.bind(this));
 

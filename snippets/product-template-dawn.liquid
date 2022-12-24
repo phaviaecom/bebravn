@@ -49,6 +49,13 @@
 	  endif
 	endfor
   -%}
+{% comment %} Count Avaliable Variant {% endcomment %}
+{% assign count_available = 0 | times: 1 %}
+{% for variant in product.variants %}
+  {% unless variant.available %}
+    {% assign count_available = count_available | plus: 1 %}
+  {% endunless %}
+{% endfor %}
   <div class='sa-variant-picker'></div>
 
   <div id="ProductSection-{{ section_id }}-{{ product.id }}"
@@ -319,7 +326,7 @@
 						{%- endunless -%}
 					  </div>
                     <div id="klaviyo-bis-trigger"></div>
-					<a id="quickview-trigger-klaviyo" class="text" href="#" data-product-id="{{ product.id }}" data-quickview-handle="{{ product.handle }}">Size sold out?</a>
+					<a id="quickview-trigger-klaviyo" class="text hide" href="#" data-product-id="{{ product.id }}" data-quickview-handle="{{ product.handle }}">Size sold out?</a>
 					{%- when 'buy_buttons' -%}
 					  <div class="product-block" {{ block.shopify_attributes }}>
 						{%- unless product.empty? -%}

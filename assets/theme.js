@@ -7581,7 +7581,6 @@ lazySizesConfig.expFactor = 4;
                   fetch('https://a.klaviyo.com/api/v1/catalog/subscribe', requestOptions)
                     .then(response => response.text())
                     .then(result => {
-                      console.log(result);
                       !document.getElementById(`btn_email_subcriber-${productID}`).classList.contains('hide') ? document.getElementById(`btn_email_subcriber-${productID}`).classList.add('hide') : '';
                       //completed_message
                       document.getElementById(`completed_message-${productID}`).classList.contains('hide') ? document.getElementById(`completed_message-${productID}`).classList.remove('hide') : '';

@@ -428,3 +428,25 @@ body {
     z-index: 99;
     background: rgba(0, 0, 0, 0.65);
 }
+.modal--is-active .product__media-item>* {
+    display: block;
+    position: relative;
+}
+.modal--is-active .media>*:not(.zoom):not(.deferred-media__poster-button), .modal--is-active .media model-viewer {
+    display: block;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+@media only screen and (min-width: 750px){
+    .modal--is-active .product__media-list-4 li.product__media-item:nth-child(4), 
+    .modal--is-active .product__media-list-6 li.product__media-item:nth-child(6) {
+        width: 100%;
+    }
+}
+.modal--is-active .slider-buttons{
+    display: none;
+}

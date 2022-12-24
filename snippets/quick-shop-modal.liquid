@@ -54,7 +54,7 @@
 	<div class="" id="container">
 		<button type="button" class="close klaviyo-bis-close" data-dismiss="modal">×</button>
 		<h3 id="klaviyo_modal_title" class="modal-title">{{ product.title }}</h3>
-		<p>Choose the sold out size below and fill in your details. We will notify you when the item is available again.</p>
+		<p>{{ "products.product.klaviyo_body_content" | t }}</p>
 		<form action="#" class="form-horizontal clearfix">
 			<div class="form-group">
 				<div id="klaviyo_variant_select" class="col-sm-12">
@@ -74,14 +74,14 @@
 				</div>
 			</div>
 			<div class="control-group clearfix submit-container">
-				<button id="btn_email_subcriber-{{ product.id }}" type="button" class="btn btn-success btn-lg col-xs-12">Notify me</button>
+				<button id="btn_email_subcriber-{{ product.id }}" type="button" class="btn btn-success btn-lg col-xs-12">{{ "products.product.klaviyo_button_label" | t }}</button>
 			</div>
 			<div id="error_message-{{ product.id }}" class="error_message alert alert-danger hide"></div>
 			<div id="completed_message-{{ product.id }}" class="completed_message alert alert-success hide">
-				You are in! We'll let you know when the item is back in stock. <a href="#" class="klaviyo-bis-close">Close</a>
+				{{ "products.product.klaviyo_subscription_success_label" | t }}<a href="#" class="klaviyo-bis-close">Close</a>
 			</div>
 		</form>
-		<p class="small-print">By providing your email address, you agree to BRAVN's privacy policy.</p>
+		<p class="small-print">{{ "products.product.klaviyo_footer_content" | t }}</p>
 	</div>
 </div>
 {% endif %}

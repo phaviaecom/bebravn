@@ -326,7 +326,7 @@
 						{%- endunless -%}
 					  </div>
                     <div id="klaviyo-bis-trigger"></div>
-					<a id="quickview-trigger-klaviyo" class="text hide" href="#" data-product-id="{{ product.id }}" data-quickview-handle="{{ product.handle }}">Size sold out?</a>
+					<a id="quickview-trigger-klaviyo" class="text hide" href="#" data-product-id="{{ product.id }}" data-quickview-handle="{{ product.handle }}">{{ "products.product.klaviyo_product_page_text" | t }}</a>
 					{%- when 'buy_buttons' -%}
 					  <div class="product-block" {{ block.shopify_attributes }}>
 						{%- unless product.empty? -%}

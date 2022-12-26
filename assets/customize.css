@@ -461,3 +461,20 @@ body {
 .modal--is-active .product__media-item .product__media-icon{
     display: none;
 }
+@media only screen and (min-width: 768px){
+    .product__media-gallery .thumbnail-slider{
+        display: none;
+    }
+}
+@media only screen and (max-width: 767px){
+    .slider-mobile-gutter .slider-buttons{
+        display: none;
+    }
+}
+.thumbnail-slider .thumbnail-list{
+    list-style-type: none;
+}
+.product__media-gallery .thumbnail-list {
+    grid-gap: 7px;
+    margin: 0px;
+}

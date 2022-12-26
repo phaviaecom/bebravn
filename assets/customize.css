@@ -450,3 +450,14 @@ body {
 .modal--is-active .slider-buttons{
     display: none;
 }
+.modal--is-active .product__media-list .media>* {
+    overflow: hidden;
+}
+.modal--is-active .media>img {
+    object-fit: cover;
+    object-position: center center;
+    transition: opacity .4s cubic-bezier(.25,.46,.45,.94);
+}
+.modal--is-active .product__media-item .product__media-icon{
+    display: none;
+}

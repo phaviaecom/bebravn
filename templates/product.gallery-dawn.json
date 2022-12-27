@@ -70,10 +70,12 @@
         },
         "dd7488b0-0e3b-43fa-9458-f5bf89fac4d7": {
           "type": "separator",
+          "disabled": true,
           "settings": {}
         },
         "1fa0dc4a-ccf4-4e31-a5e6-e3a8f621e833": {
           "type": "sales_point",
+          "disabled": true,
           "settings": {
             "icon": "truck",
             "text": "KOSTENFREIE LIEFERUNG AB €79,-"
@@ -81,6 +83,7 @@
         },
         "sales_point": {
           "type": "sales_point",
+          "disabled": true,
           "settings": {
             "icon": "globe",
             "text": "WELTWEITER VERSAND"
@@ -88,6 +91,7 @@
         },
         "02f51e89-156f-4578-a678-c220ad5f6a4f": {
           "type": "sales_point",
+          "disabled": true,
           "settings": {
             "icon": "leaf",
             "text": "NACHHALTIGE PRODUKTION"
@@ -95,6 +99,7 @@
         },
         "separator": {
           "type": "separator",
+          "disabled": true,
           "settings": {}
         },
         "description": {
@@ -177,7 +182,7 @@
         "enable_sticky_info": true,
         "gallery_layout": "stacked",
         "media_size": "large",
-        "mobile_thumbnails": "hide",
+        "mobile_thumbnails": "show",
         "hide_variants": false,
         "padding_top": 36,
         "padding_bottom": 36

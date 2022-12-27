@@ -5674,7 +5674,10 @@ form+.footer__social{
 @media only screen and (min-width:769px){
 
 .modal--square .modal__centered-content{
-      padding:45px;
+      padding-left:67px;
+      padding-right:45px;
+      padding-top:45px;
+      padding-bottom:45px;
       max-height:90vh;
       max-width:1200px
 }
@@ -11893,6 +11896,11 @@ color: #000000 !important;
   position: relative;
   height: 46px;
 }
+
+.btn.btn--full.register-btn:hover {
+  background: #7cd2fd !important;
+}
+
 .btn.btn--full.register-btn a {
   color: #fff;
   position: absolute;
@@ -12037,7 +12045,6 @@ color: #000000 !important;
     transition: opacity 1s ease !important;
 }
 
-/* BRAVN - Add to Wishlist adjustments - 17 September '22 */
 @media screen and (max-width:768px){ .frcp-wishlist-btn__text { 
   font-size: 11px;
   letter-spacing: 0.3em;
@@ -12137,12 +12144,58 @@ color: #000000 !important;
   color: #545454 !important;
 }
 
-.frcp-login__title {
+.frcp-popup__title {
+  line-height: 30px !important;
   color: #000 !important;
   text-transform: none !important;
-  letter-spacing: 0.05em;
-  font-weight: 100 !important;
-  font-size: 16px !important;
+  font-weight: 600 !important;
+  font-size: 22px !important;
+}
+
+.frcp-popup {
+  color: #000 !important;
+}
+
+.frcp-popup__btn {
+  line-height: 2 !important;
+  width: 100% !important;
+  max-width: 400px !important;
+}
+
+.frcp-form__switch--registration {
+  line-height: 2 !important;
+  width: 100% !important;
+  background: #7cd2fd !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.25em !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  border-color: #7cd2fd !important;
+  margin-top: -8px !important;
+}
+
+.frcp-form__switch--login {
+  line-height: 2 !important;
+  width: 100% !important;
+  margin-top: -8px !important;
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+  letter-spacing: 0.25em !important;
+  font-weight: 600 !important;
+  border-radius: 3px !important;
+  border-color: #e5e5e5 !important;
+  background: #e5e5e5 !important;
+  color: #545454 !important;
+}
+
+.frcp-popup__close {
+  font-weight: 400 !important;
+  font-size: 22px !important;
+  text-transform: none !important;
+  font-family: monospace !important;
+  font-stretch: expanded !important;
 }
 
 .frcp-address__default {
@@ -12597,4 +12650,19 @@ color: #000000 !important;
 .jdgm-histogram__frequency {
     width: 18px;
 }
+}
+
+button[id=HideRecoverPasswordLink] {
+    text-transform: uppercase !important;
+    font-size: 13px !important;
+    letter-spacing: 0.25em !important;
+    font-weight: 600 !important;
+    border-radius: 3px !important;
+    border-color: #e5e5e5 !important;
+    background: #e5e5e5 !important;
+    color: #545454 !important;
+    display: block !important;
+    width: 140px !important;
+    height: 44px !important;
+    text-align: center !important;
 }

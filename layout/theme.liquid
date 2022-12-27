@@ -4,24 +4,6 @@
   lang="{{ request.locale.iso_code }}"
   dir="{{ settings.text_direction }}">
   <head>
-
-    <script type="text/javascript">
-      var framefenster = document.getElementsByTagName("iFrame");
-      if(framefenster.length > 0) {
-                              var auto_resize_timer = window.setInterval("autoresize_frames()", 400);
-                              function autoresize_frames() {
-                                for (var i = 0; i < framefenster.length; ++i) {
-                                    if(framefenster[i].contentWindow.document.body){
-                                      var framefenster_size = framefenster[i].contentWindow.document.body.offsetHeight;
-                                      if(document.all && !window.opera) {
-                                        framefenster_size = framefenster[i].contentWindow.document.body.scrollHeight;
-                                      }
-                                      framefenster[i].style.height = framefenster_size + 'px';
-                                    }
-                                }
-                              }
-                            }
-    </script>
     {% include "load-metafields" %}
 
     <meta charset="utf-8">
@@ -123,6 +105,23 @@
     {% render 'judgeme_core' %}
 
     {{ 'customize.css' | asset_url | stylesheet_tag: preload: true }}
+    <script type="text/javascript">
+    var framefenster = document.getElementsByTagName("iFrame");
+    if(framefenster.length > 0) {
+      var auto_resize_timer = window.setInterval("autoresize_frames()", 400);
+      function autoresize_frames() {
+        for (var i = 0; i < framefenster.length; ++i) {
+            if(framefenster[i].contentWindow.document.body){
+              var framefenster_size = framefenster[i].contentWindow.document.body.offsetHeight;
+              if(document.all && !window.opera) {
+                framefenster_size = framefenster[i].contentWindow.document.body.scrollHeight;
+              }
+              framefenster[i].style.height = framefenster_size + 'px';
+            }
+        }
+      }
+    }
+  </script>
     <!-- HC - Adding slick slider - 23 August '22 -->
     <link
       rel="stylesheet"

@@ -263,7 +263,7 @@ function getFocusableElements(container) {
 	  this.pageTotalElement = this.querySelector('.slider-counter--total');
 	  this.prevButton = this.querySelector('button[name="previous"]');
 	  this.nextButton = this.querySelector('button[name="next"]');
-  
+  console.log(this.nextButton);
 	  if (!this.slider || !this.nextButton) return;
   
 	  this.initPages();
@@ -278,7 +278,6 @@ function getFocusableElements(container) {
 
 	  this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
 	  this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
-
 	}
   
 	initPages() {

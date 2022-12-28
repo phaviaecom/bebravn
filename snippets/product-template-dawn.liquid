@@ -49,6 +49,7 @@
 	  endif
 	endfor
   -%}
+
   <div class='sa-variant-picker'></div>
 
   <div id="ProductSection-{{ section_id }}-{{ product.id }}"
@@ -81,7 +82,7 @@
 					product: product,
 					isModal: isModal,
 					image_position: image_position,
-					product_zoom_enable: product_zoom_enable,
+					product_zoom_enable: true,
 					product_zoom_size: product_zoom_size,
 					product_image_size: product_image_size,
 					thumbnail_arrows: thumbnail_arrows,
@@ -318,6 +319,7 @@
 						  {%- endfor -%}
 						{%- endunless -%}
 					  </div>
+                    <div id="klaviyo-bis-trigger"></div>
 					{%- when 'buy_buttons' -%}
 					  <div class="product-block" {{ block.shopify_attributes }}>
 						{%- unless product.empty? -%}
@@ -338,7 +340,7 @@
 							></div>
 						{%- endif -%}
 					  </div>
-                    <div class='frcp-quick-view-placeholder' data-frcp-product-id='{{ product.id }}' data-frcp-product-handle='{{ product.handle }}'></div>
+                    <div class='frcp-quick-view-placeholder' data-frcp-product-id='{{ product.id }}' data-frcp-product-handle='{{ product.handle }}' data-frcp-variant-id='{{ product.selected_or_first_available_variant.id }}'></div>
 					{%- when 'sales_point' -%}
 					  {%- unless block.settings.text == blank -%}
 						<div class="product-block product-block--sales-point" {{ block.shopify_attributes }}>

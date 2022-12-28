@@ -24,6 +24,8 @@
 		<a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
 			{{ "accessibility.skip_to_product_info" | t }}
 		</a>
+
+      
 		<ul id="Slider-Gallery-{{ section.id }}" class="product__media-list grid grid--peek list-unstyled slider slider--mobile product__media-list-{{ product.media.size }}" role="list">
 			{%- liquid
 			assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
@@ -54,6 +56,10 @@
 				{% render 'product-thumbnail', media: media, position: media_position, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true, media_width: media_width, lazy_load: true %}
 				</li>
 			{%- endunless -%}
+
+             
+       
+   
 			{%- endfor -%}
 		</ul>
 		<div class="slider-buttons no-js-hidden{% if media_count < 2 or section.settings.mobile_thumbnails == 'show' %} small-hide{% endif %}">
@@ -86,6 +92,7 @@
 					aria-controls="GalleryViewer-{{ section.id }}"
 					aria-describedby="Thumbnail-{{ section.id }}-0"
 				>
+            
 					<img id="Thumbnail-{{ section.id }}-0" srcset="{% if featured_media.preview_image.width >= 54 %}{{ featured_media.preview_image | img_url: '54x' }} 54w,{% endif %}
 					{% if featured_media.preview_image.width >= 74 %}{{ featured_media.preview_image | img_url: '74x' }} 74w,{% endif %}
 					{% if featured_media.preview_image.width >= 104 %}{{ featured_media.preview_image | img_url: '104x' }} 104w,{% endif %}
@@ -101,7 +108,9 @@
 					width="208"
 					loading="lazy"
 					>
+              
 				</button>
+              
 				</li>
 			{%- endif -%}
 			{%- for media in product.media -%}

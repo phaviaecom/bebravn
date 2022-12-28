@@ -1,5 +1,42 @@
 {
   "sections": {
+    "d191fc10-f564-4708-b6ae-26f4f1f119dd": {
+      "type": "promo-grid",
+      "disabled": true,
+      "blocks": {
+        "template--16151109697802__d191fc10-f564-4708-b6ae-26f4f1f119dd-16706691604fcb44c8-0": {
+          "type": "advanced",
+          "settings": {
+            "subheading": "",
+            "heading": "#BEBRAVN",
+            "textarea": "Sportswear mit California-Feeling",
+            "cta_text1": "Herren",
+            "cta_link1": "shopify:\/\/collections\/men",
+            "cta_text2": "",
+            "cta_link2": "",
+            "image": "shopify:\/\/shop_images\/AdobeStock_145543654.jpg",
+            "video_url": "",
+            "width": "100",
+            "height": 800,
+            "text_size": 145,
+            "text_align": "vertical-bottom horizontal-right",
+            "focal_point": "bottom",
+            "color_accent": "#1e4274",
+            "boxed": false,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16151109697802__d191fc10-f564-4708-b6ae-26f4f1f119dd-16706691604fcb44c8-0"
+      ],
+      "settings": {
+        "full_width": true,
+        "gutter_size": 0,
+        "space_above": false,
+        "space_below": false
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -36,7 +73,7 @@
             "text_align": "vertical-center horizontal-right",
             "image": "shopify:\/\/shop_images\/AdobeStock_145543654.jpg",
             "overlay_opacity": 0,
-            "focal_point": "bottom center"
+            "focal_point": "20% 100%"
           }
         },
         "1e7f3dfa-8813-4467-80cd-6a74a7575b05": {
@@ -233,7 +270,7 @@
         "title": "California Mode",
         "text": "<p>Dieses ausgelassene Lebensgefühl von Freiheit und Inspiration: BRAVN bringt Dir genau das ganz nah...  Entdecke unsere mit Vitamin-D angereicherten Styles für einen aktiven Alltag und Deine intensivsten Momente. <\/p>",
         "button_label": "Kollektionen Anzeigen",
-        "button_link": "shopify:\/\/collections\/all",
+        "button_link": "shopify:\/\/collections",
         "image": "shopify:\/\/shop_images\/pexels-ian-beckley-2440011-3840x3800.jpg",
         "focal_point": "top",
         "layout": "left",
@@ -260,6 +297,7 @@
     }
   },
   "order": [
+    "d191fc10-f564-4708-b6ae-26f4f1f119dd",
     "slideshow",
     "16576107108b5374cc",
     "1657610803a1f0a334",

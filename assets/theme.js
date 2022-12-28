@@ -3734,7 +3734,9 @@ lazySizesConfig.expFactor = 4;
     }
   
     init() {
-      const toolTipOpen = new CustomEvent('tooltip:open', {
+
+      try{
+           const toolTipOpen = new CustomEvent('tooltip:open', {
         detail: {
           context: this.dataset.toolTip,
           content: this.toolTipContent.innerHTML
@@ -3746,7 +3748,10 @@ lazySizesConfig.expFactor = 4;
         e.stopPropagation();
         this.dispatchEvent(toolTipOpen);
       });
+      }catch(err){}
+   
     }
+    
   }
   
   customElements.define('tool-tip-trigger', ToolTipTrigger);

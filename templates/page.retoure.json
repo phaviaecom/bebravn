@@ -121,9 +121,9 @@
         "16605483636d921d6d-1": {
           "type": "liquid",
           "settings": {
-            "code": "<iFrame src=\"https:\/\/bravn.com\/apps\/returns?locale=de\" style=\"width:100%; height:700px; border:none;\" frameborder=\"0\" name=\"retouren-portal\" scrolling=\"no\"><\/iFrame>",
+            "code": "<iFrame src=\"https:\/\/bravn.com\/apps\/returns?locale=de\" style=\"width:100%; height:100%; border:none;\" frameborder=\"0\" name=\"retouren-portal\" scrolling=\"no\"><\/iFrame>",
             "width": "100%",
-            "alignment": "center"
+            "alignment": "top-middle"
           }
         }
       },

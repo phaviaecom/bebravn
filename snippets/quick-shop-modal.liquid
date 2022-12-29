@@ -1,4 +1,16 @@
-<div id="QuickShopModal-{{ product.id }}" class="modal modal--square modal--quick-shop" data-product-id="{{ product.id }}">
+{% assign count_available = 0 | times: 1 %}
+{% for variant in product.variants %}
+  {% unless variant.available %}
+    {% assign count_available = count_available | plus: 1 %}
+  {% endunless %}
+{% endfor %}
+
+<div
+  id="QuickShopModal-{{ product.id }}"
+  class="modal modal--square modal--quick-shop"
+  data-product-id="{{ product.id }}"
+  data-available="{{ count_available }}"
+  >
   <div class="modal__inner">
     <div class="modal__centered">
       <div class="modal__centered-content">
@@ -6,24 +18,67 @@
       </div>
 
       <button type="button" class="modal__close js-modal-close text-link">
-        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          role="presentation"
+          class="icon icon-close"
+          viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74" /></svg>
         <span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t | json }}</span>
       </button>
     </div>
   </div>
 </div>
+
+{% if count_available != 0 %}
+<div id="klaviyo-bis-modal-quick-view-{{ product.id }}" class="klaviyo-bis-modal-quick-view hide">
+	<div class="" id="container">
+		<button type="button" class="close klaviyo-bis-close" data-dismiss="modal">×</button>
+		<h3 id="klaviyo_modal_title" class="modal-title">{{ product.title }}</h3>
+		<p>{{ "products.product.klaviyo_body_content" | t }}</p>
+		<form action="#" class="form-horizontal clearfix">
+			<div class="form-group">
+				<div id="klaviyo_variant_select" class="col-sm-12">
+          <input type="hidden" id="product" value="{{ product.id }}">
+          <select id="klaviyo_variants-{{ product.id }}" class="selectpicker form-control input-lg">
+            {% for variant in product.variants %}
+              {% unless variant.available %}
+                <option value="{{ variant.id }}">{{ variant.title }}</option>
+              {% endunless %}
+            {% endfor %}  
+          </select>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<input type="email" id="klaviyo_email-{{ product.id }}" placeholder="Email address" class="form-control input-lg" value="">
+				</div>
+			</div>
+			<div class="control-group clearfix submit-container">
+				<button id="btn_email_subcriber-{{ product.id }}" type="button" class="btn btn-success btn-lg col-xs-12">{{ "products.product.klaviyo_button_label" | t }}</button>
+			</div>
+			<div id="error_message-{{ product.id }}" class="error_message alert alert-danger hide"></div>
+			<div id="completed_message-{{ product.id }}" class="completed_message alert alert-success hide">
+				{{ "products.product.klaviyo_subscription_success_label" | t }}<a href="#" class="klaviyo-bis-close">Close</a>
+			</div>
+		</form>
+		<p class="small-print">{{ "products.product.klaviyo_footer_content" | t }}</p>
+	</div>
+</div>
+{% endif %}
+
 {%- style -%}
-  #QuickShopModal-{{ product.id }} .product__main-photos .product-slideshow{
+  #QuickShopModal-{{ product.id }}.product__main-photos .product-slideshow {
     display: block;
   }
-  #QuickShopModal-{{ product.id }} .product__main-photos .product__main-photo{
+  #QuickShopModal-{{ product.id }}.product__main-photos .product__main-photo {
     display: none;
   }
-  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item.product__thumb-item-featured{
+  #QuickShopModal-{{ product.id }}.product__thumbs .product__thumb-item.product__thumb-item-featured {
     display: block !important;
   }
-  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item a.is-active:before, 
-  #QuickShopModal-{{ product.id }} .product__thumbs .product__thumb-item a:focus:before{
+  #QuickShopModal-{{ product.id }}.product__thumbs .product__thumb-item a.is-active:before,
+  #QuickShopModal-{{ product.id }}.product__thumbs .product__thumb-item a:focus:before {
     content: "";
     display: block;
     position: absolute;

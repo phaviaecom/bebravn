@@ -105,7 +105,7 @@ $(document).ready(() => {
 
 		setVariants();
 	 }
-	 if(window.location.href.includes('/pages/test-return-page')){
+	 if(window.location.href.includes('/pages/returns')){
 		$('#retouren-portal').on('load', (e) => {
 		   autoResize(e.target);
 		})

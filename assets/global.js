@@ -333,6 +333,7 @@ function getFocusableElements(container) {
 	onButtonClick(event) {
 	  event.preventDefault();
 	  const step = event.currentTarget.dataset.step || 1;
+
 	  this.slideScrollPosition = event.currentTarget.name === 'next' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
 	  this.slider.scrollTo({
 		left: this.slideScrollPosition

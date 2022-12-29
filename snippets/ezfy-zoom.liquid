@@ -2098,7 +2098,7 @@ ezfyDawnThemeZoom = (function() {
 
                 
 
-      console.log("image", image)
+      //console.log("image", image)
     
       
       
@@ -2260,10 +2260,7 @@ ezfyDawnThemeZoom = (function() {
         index = parseInt($index.getAttribute(`data-slide-index`));
         
 
-
-       
-
-                if (isOldDawn()){
+          if (isOldDawn()){
               restart();
           }
 
@@ -2352,7 +2349,7 @@ ezfyDawnThemeZoom = (function() {
         gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         gallery.init();
         gallery.ui.hideControls();
-        gallery.listen('beforeChange', function() {
+        gallery.listen('beforeChange', function(e) {
 
           const $close = document.querySelector(`#ezfyLightbox`);
 
@@ -2390,6 +2387,19 @@ ezfyDawnThemeZoom = (function() {
           console.log("mouse")
         });
 
+        gallery.listen('afterChange', function(e) {
+            console.log("afterChange");
+        });
+
+
+        const prevButton = document.querySelector('.pswp__button--arrow--left');
+        const nextButton = document.querySelector('.pswp__button--arrow--right');
+        prevButton.addEventListener('click', (e)=>{
+          updateMainSlierImage(e, gallery);
+        });
+        nextButton.addEventListener('click', (e)=>{
+          updateMainSlierImage(e, gallery);
+        });
 
       };
 
@@ -2500,9 +2510,7 @@ ezfyDawnThemeZoom = (function() {
 		li[data-ezfy-media-position='${position}'],
 		li[id^='Slide-template'][data-ezfy-media-position='${position}']`);
 
-
-
-    if ($slide) {
+    if ($slide) { 
 
       setTimeout(() => {
         const scrollY = window.pageYOffset;
@@ -2513,7 +2521,7 @@ ezfyDawnThemeZoom = (function() {
         $slide.scrollIntoView({
           behavior: 'instant'
         });
-        console.log("finishe", position);
+
         $parent.style.scrollBehavior = 'smooth';
 
         window.scrollTo(0, scrollY);
@@ -2551,6 +2559,32 @@ ezfyDawnThemeZoom = (function() {
     });
   }
 
+  function updateMainSlierImage(e, gallery){
+    if (!_isMobile() && !isOldDawn()) {
+      return;
+    }
+
+    const mainSlider = document.querySelector('[id^="Slider-"]');
+    const sliderItems = document.querySelectorAll('[id^="Slide-"]');
+   
+    const step = 1;
+
+    const sliderItemsToShow = Array.from(sliderItems).filter(element => element.clientWidth > 0);
+	  if (sliderItemsToShow.length < 2) return;
+	  const sliderItemOffset = sliderItemsToShow[1].offsetLeft - sliderItemsToShow[0].offsetLeft;
+    const slideScrollPosition = e.target.classList.contains('pswp__button--arrow--right') ? mainSlider.scrollLeft + (step * sliderItemOffset) : mainSlider.scrollLeft - (step *sliderItemOffset);
+
+    mainSlider.scrollTo({
+        left: slideScrollPosition
+    });
+
+    const image = ezfyDawnThemeZoomImages.filter(e => gallery.currItem.src.includes(e.src))[0]
+    if (!image) {
+      return;
+    }
+    const position = image.imagePosition;
+
+  }
 
   function reset() {
 
@@ -2586,7 +2620,6 @@ ezfyDawnThemeZoom = (function() {
       });
     }
   }
-
 
 
   async function restart() {

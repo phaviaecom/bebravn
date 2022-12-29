@@ -105,4 +105,12 @@ $(document).ready(() => {
 
 		setVariants();
 	 }
+	 if(window.location.href.includes('/pages/test-return-page')){
+		$('#retouren-portal').on('load', (e) => {
+		   autoResize(e.target);
+		})
+		function autoResize(iframe) {
+		   $(iframe).height($(iframe).contents().find('html').height());
+	   }
+	}
 })

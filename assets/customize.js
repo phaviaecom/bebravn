@@ -113,4 +113,28 @@ $(document).ready(() => {
 		   $(iframe).height($(iframe).contents().find('html').height());
 	   }
 	}
+
+	if(!window.location.href.includes('/products/')){
+		document.addEventListener('quickview:loaded', function (evt) {
+			console.log('First 12345');
+			let quickView = evt.target.activeElement;
+			let id = quickView.getAttribute('data-product-id');
+			let idSlider = `QuickShopModal-Gallery-${id}`;
+			// $(`#${idSlider} .quick-view-main-carousel`).flickity({
+			// 	// options
+			// 	cellAlign: 'left',
+			// 	contain: true
+			// });
+			var flkty = new Flickity( `#${idSlider} .quick-view-main-carousel`, {
+				// options
+			  });
+			console.log($(`#${idSlider} .quick-view-main-carousel`));
+			quickView.querySelectorAll(".product__modal-opener .product__media img").forEach( (elm) => {
+				elm.addEventListener('click', (e) => {
+					console.log(e);
+					document.getElementById(`${idSlider}`).classList.contains('hide') ? document.getElementById(`${idSlider}`).classList.remove('hide') : '';
+				})
+			});
+		})
+	}
 })

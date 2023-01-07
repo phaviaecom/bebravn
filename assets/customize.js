@@ -140,15 +140,13 @@ $(document).ready(() => {
 			})
 
 			$('#QuickShopModal-Gallery-Zoom .pswp__button--arrow--left').on('click', (e) => {
-				console.log(i);
 				document.querySelector(`#QuickShopModal-Gallery-Zoom .carousel-cell[data-position="${i + 1}"]`)?.classList.remove('active');
-				i = parseInt((j + i + 1)%j);
+				i = parseInt((j + i - 1)%j);
 				document.querySelector(`#QuickShopModal-Gallery-Zoom .carousel-cell[data-position="${i + 1}"]`)?.classList.add('active');
 			})
 			$('#QuickShopModal-Gallery-Zoom .pswp__button--arrow--right').on('click', (e) => {
-				console.log(i);
 				document.querySelector(`#QuickShopModal-Gallery-Zoom .carousel-cell[data-position="${i + 1}"]`)?.classList.remove('active');
-				i = parseInt((j + i - 1)%j);
+				i = parseInt((j + i + 1)%j);
 				document.querySelector(`#QuickShopModal-Gallery-Zoom .carousel-cell[data-position="${i + 1}"]`)?.classList.add('active');
 			})
 		})

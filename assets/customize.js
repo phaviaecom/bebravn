@@ -133,10 +133,14 @@ $(document).ready(() => {
 					});
 					i = parseInt(e.target.dataset.position) == 1 ? 0 : parseInt(elm.dataset.position) - 1;
 					document.getElementById('QuickShopModal-Gallery-Zoom').classList.contains('hide') ? document.getElementById('QuickShopModal-Gallery-Zoom').classList.remove('hide') : '';
+				    document.getElementById('overlay-background').classList.contains('hide') ? document.getElementById('overlay-background').classList.remove('hide') : '';
+					document.getElementById('overlay-background').style.backgroundColor = '#FFFFFF';
 				})
 			});
 			$('#QuickShopModal-Gallery-Zoom .pswp__button--close').on('click', (e) => {
 				!document.getElementById('QuickShopModal-Gallery-Zoom').classList.contains('hide') ? document.getElementById('QuickShopModal-Gallery-Zoom').classList.add('hide') : '';
+				!document.getElementById('overlay-background').classList.contains('hide') ? document.getElementById('overlay-background').classList.add('hide') : '';
+				 document.getElementById('overlay-background').style.backgroundColor = '#000000a6';
 			})
 
 			$('#QuickShopModal-Gallery-Zoom .pswp__button--arrow--left').on('click', (e) => {

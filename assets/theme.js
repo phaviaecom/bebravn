@@ -7528,7 +7528,7 @@ lazySizesConfig.expFactor = 4;
             let idProductQuickview = evt.target.activeElement.getAttribute('data-product-id');
 
             if(evt.target.activeElement.dataset.available != 0){
-              evt.target.activeElement.querySelector('#quickview-trigger-klaviyo').classList.remove('hide');
+              evt.target.activeElement.querySelector('#quickview-trigger-klaviyo')?.classList.remove('hide');
             }
             evt.target.activeElement.querySelector('#quickview-trigger-klaviyo')?.addEventListener('click', (e) => {
               e.preventDefault();

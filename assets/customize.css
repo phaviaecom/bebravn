@@ -440,6 +440,7 @@
       left: 0;
       height: 100%;
       width: 100%;
+      cursor: zoom-in;
   }
   @media only screen and (min-width: 750px){
       .modal--is-active .product__media-list-4 li.product__media-item:nth-child(4), 
@@ -490,7 +491,72 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     z-index: 999;
+    background-color: #ffffff;
   }
+.quick-view-shop-gallery .quick-view-main-carousel{
+  display: flex;
+  width: 100%;
+  align-content: center;
+  /*max-width: 600px;*/
+  margin: 0px auto;
+  /* height: 100vh;
+  overflow: auto; */
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 40px;
+  transition: all 300ms ease-in-out;
+  transform: scale(1);
+}
+.quick-view-main-carousel .carousel-cell{
+  width: 100%;
+}
+.quick-view-main-carousel .carousel-cell img{
+  max-width: 750px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.quick-view-shop-gallery .btn--circle {
+  box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+}
+.quick-view-shop-gallery .carousel-cell{
+  display: none;
+  width: 100%;
+  text-align: center;
+  /* max-width: calc(100% - 50px); */
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}
+.quick-view-shop-gallery .carousel-cell.active{
+  display: inline-block;
+}
+.quick-view-shop-gallery .pswp__ui--hidden{
+  position: relative;
+  top: -85px;    
+  text-align: center;
+  width: 100%;
+}
+.quick-view-main-carousel svg.btn--body{
+  pointer-events: none;
+}
+.quick-view-shop-gallery .pswp__button--close{
+  width: 55px;
+  height: 55px;
+  margin: 0px 20px;
+}
+.quick-view-shop-gallery .pswp__button--arrow--left .icon,
+.quick-view-shop-gallery .pswp__button--arrow--right .icon{
+  width: 12px;
+  height: 12px;
+}
+.quick-view-shop-gallery .pswp__button--arrow--left,
+.quick-view-shop-gallery .pswp__button--arrow--right{
+  width: 50px;
+  height: 50px;
+}
+.quick-view-shop-gallery.hide .quick-view-main-carousel{
+  transform: scale(0);
+}

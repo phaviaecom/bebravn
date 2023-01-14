@@ -488,17 +488,18 @@
   }
   .quick-view-shop-gallery{
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0px;
+    left: 0px;
     width: 100%;
     overflow: hidden;
     z-index: 999;
-    background-color: #ffffff;
+    background: #f1f1f1;
+    height: 100%;
   }
 .quick-view-shop-gallery .quick-view-main-carousel{
   display: flex;
   width: 100%;
+  height: 100%;
   align-content: center;
   /*max-width: 600px;*/
   margin: 0px auto;
@@ -506,17 +507,13 @@
   overflow: auto; */
   align-items: flex-start;
   justify-content: center;
-  padding-top: 40px;
   transition: all 300ms ease-in-out;
   transform: scale(1);
 }
-.quick-view-main-carousel .carousel-cell{
-  width: 100%;
-}
 .quick-view-main-carousel .carousel-cell img{
-  max-width: 750px;
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   object-position: center;
 }
 .quick-view-shop-gallery .btn--circle {
@@ -525,6 +522,7 @@
 .quick-view-shop-gallery .carousel-cell{
   display: none;
   width: 100%;
+  height: 100%;
   text-align: center;
   /* max-width: calc(100% - 50px); */
   overflow: hidden;
@@ -532,6 +530,12 @@
 }
 .quick-view-shop-gallery .carousel-cell.active{
   display: inline-block;
+}
+.quick-view-shop-gallery .carousel-cell.active img{
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .quick-view-shop-gallery .pswp__ui--hidden{
   position: relative;

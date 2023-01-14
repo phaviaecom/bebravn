@@ -26,6 +26,7 @@ $(document).ready(() => {
 		}
 	}
 
+	//Change the variant
 	if(window.location.href.includes("/products")){
 		let setTime = setInterval(() => {
 			$('.list-variants .swatch-item').each( (idx, el) => {
@@ -113,6 +114,11 @@ $(document).ready(() => {
 		   $(iframe).height($(iframe).contents().find('html').height());
 	   }
 	}
+	
+	// Handle zoom Image
+	function isZooming(){
+		return $(window).height();
+	}
 
 	if(!window.location.href.includes('/products/')){
 		document.addEventListener('quickview:loaded', function (evt) {
@@ -130,6 +136,9 @@ $(document).ready(() => {
 				elm.addEventListener('click', (e) => {
 					document.querySelectorAll(`#QuickShopModal-Gallery-Zoom .carousel-cell`).forEach((elm) => {
 						elm.dataset.position == e.target.dataset.position ? elm.classList.add('active') : elm.classList.remove('active');
+						let ratio = isZooming();
+						elm.querySelector('img').style.height = ratio + 'px';
+						elm.querySelector('img').style.width = ratio + 'px';
 					});
 					i = parseInt(e.target.dataset.position) == 1 ? 0 : parseInt(elm.dataset.position) - 1;
 					document.getElementById('QuickShopModal-Gallery-Zoom').classList.contains('hide') ? document.getElementById('QuickShopModal-Gallery-Zoom').classList.remove('hide') : '';

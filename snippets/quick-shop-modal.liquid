@@ -71,7 +71,7 @@
 <div id="QuickShopModal-Gallery-{{ product.id }}" class="hide">
   {% for media in product_images %}
   <div class="carousel-cell {% if forloop.first %}active{% endif %}" data-position="{{ media.position }}">
-      <img src="{{ media.preview_image.src | img_url: '1946x' }}" alt="{{ media.preview_image.alt }}" loading="lazy" />
+      <img src="{{ media | img_url: 'master' }}" alt="{{ media.preview_image.alt | escape }}" loading="lazy" />
     </div>
   {% endfor %}
 </div>

@@ -12667,5 +12667,195 @@ button[id=HideRecoverPasswordLink] {
     text-align: center !important;
 }
 
-.register-btn
-#7cd2fd
+{% if template.name != 'product' %}
+
+.pswp{
+  display:none;
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  overflow:hidden;
+  touch-action:none;
+  z-index:1500;
+  -webkit-text-size-adjust:100%;
+  -webkit-backface-visibility:hidden;
+  outline:none;
+}
+
+.pswp img{
+  max-width:none;
+}
+
+.pswp--animate_opacity{
+  opacity:0.001;
+  will-change:opacity;
+  transition:opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp--open{
+  display:block; }
+
+.pswp--zoom-allowed .pswp__img{
+  cursor:zoom-in; }
+
+.pswp--zoomed-in .pswp__img{
+  cursor:grab; }
+
+.pswp--dragging .pswp__img{
+  cursor:grabbing; }
+
+.pswp__bg{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:{{ settings.color_body_bg | default: "#fff" }};
+  background:var(--colorBody);
+  opacity:0;
+  transform:translateZ(0);
+  -webkit-backface-visibility:hidden; }
+
+.pswp__scroll-wrap{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:hidden; }
+
+.pswp__container,.pswp__zoom-wrap{
+  touch-action:none;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0; }
+
+.pswp__container,.pswp__img{
+  -webkit-user-select:none;
+          user-select:none;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-touch-callout:none; }
+
+.pswp__zoom-wrap{
+  position:absolute;
+  width:100%;
+  transform-origin:left top;
+  transition:transform 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp__bg{
+  will-change:opacity;
+  transition:opacity 333ms cubic-bezier(0.4, 0, 0.22, 1); }
+
+.pswp--animated-in .pswp__bg,.pswp--animated-in .pswp__zoom-wrap{
+  transition:none; }
+
+.pswp__container,.pswp__zoom-wrap{
+  -webkit-backface-visibility:hidden; }
+
+.pswp__item{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  overflow:hidden; }
+
+.pswp__img{
+  position:absolute;
+  width:auto;
+  height:auto;
+  top:0;
+  left:0; }
+
+.pswp__img--placeholder{
+  -webkit-backface-visibility:hidden; }
+
+.pswp--ie .pswp__img{
+  width:100% !important;
+  height:auto !important;
+  left:0;
+  top:0; }
+
+.pswp__error-msg{
+  position:absolute;
+  left:0;
+  top:50%;
+  width:100%;
+  text-align:center;
+  line-height:16px;
+  margin-top:-8px;
+  color:#ccc; }
+
+.pswp__error-msg a{
+  color:#ccc;
+  text-decoration:underline; }
+
+.pswp__button{
+  position:relative
+}
+
+.pswp__button:after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }
+
+.pswp__button svg{
+    pointer-events:none;
+  }
+
+.pswp__button--arrow--left .icon,.pswp__button--arrow--right .icon{
+  width:13px;
+  height:13px;
+  margin:8px;
+}
+
+.pswp__button[disabled]{
+  opacity:0;
+  pointer-events:none;
+}
+
+.pswp__ui{
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  bottom:30px;
+  left:0;
+  right:0;
+  transform:translateY(0);
+  transition:transform 0.25s 0.6s
+}
+
+.pswp__ui .btn{
+    margin:15px;
+  }
+
+.pswp__ui--hidden{
+  transform:translateY(150%);
+  transition:transform 0.25s;
+}
+
+html.pswp-open-in-ios,html.pswp-open-in-ios body{
+  background:#444;
+  height:var(--window-inner-height);
+  overflow:hidden;
+  box-sizing:border-box;
+}
+
+.pswp-open-in-ios body>*{
+  display:none; 
+}
+
+.pswp-open-in-ios body .pswp.pswp--open{
+  display:block; 
+}
+
+{% endif %}

@@ -5411,7 +5411,7 @@ lazySizesConfig.expFactor = 4;
       triggerClick: function (evt) {
         // Streamline changes between a slideshow and
         // stacked images, so recheck if we are still
-        // working with a slideshow when initializing zoom
+        // working with a slideshow when initializing zoom        
         if (this.container.dataset && this.container.dataset.hasSlideshow === 'true') {
           this.inSlideshow = true;
         } else {
@@ -5419,11 +5419,11 @@ lazySizesConfig.expFactor = 4;
         }
 
         this.items = this.getImageData();
-
-        var image = this.inSlideshow ? this.container.querySelector(selectors.activeImage) : evt.currentTarget;
-
+console.log(this.items);
+        var image = this.inSlideshow ? this.container.querySelector(selectors.activeImage) : evt.currentTarget.parentNode.querySelector('img');
+console.log(image);
         var index = this.inSlideshow ? this.getChildIndex(image) : image.dataset.index;
-
+console.log(index);
         this.initGallery(this.items, index);
       },
 
@@ -5488,7 +5488,9 @@ lazySizesConfig.expFactor = 4;
             };
           }
         }
-
+console.log(items);
+console.log(options);
+console.log(pswpElement);
         this.gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         this.gallery.listen('afterChange', this.afterChange.bind(this));
         this.gallery.init();
@@ -8109,6 +8111,18 @@ lazySizesConfig.expFactor = 4;
     }
 
     document.dispatchEvent(new CustomEvent('page:loaded'));
+
+    if(!window.location.href.includes('/products/')){
+      document.addEventListener('quickview:loaded', function (evt) {
+ 
+        let idProduct = evt.detail.productId.match(/\d/g).join('');
+        
+        console.log(idProduct);
+        let container = document.querySelector(`#Slider-Gallery-template--${idProduct}__main`);
+        let zoom = new theme.Photoswipe(container, idProduct);
+      })
+    }
+
   });
 
 })();

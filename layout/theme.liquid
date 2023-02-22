@@ -171,6 +171,11 @@
     render 'klaviyo-pupups'
     render "bc_banner"
     render "zoom-quick-view"
+
+    if template.name != 'product'
+       render 'photoswipe-template'
+    endif
+
   -%}
 
   <!-- HC - Featured collection slider - 23 August '22 -->

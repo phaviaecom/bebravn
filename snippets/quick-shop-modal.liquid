@@ -67,14 +67,7 @@
 </div>
 {% endif %}
 
-{% assign product_images = product.media | where: "media_type", "image" %}
-<div id="QuickShopModal-Gallery-{{ product.id }}" class="hide">
-  {% for media in product_images %}
-  <div class="carousel-cell {% if forloop.first %}active{% endif %}" data-position="{{ media.position }}">
-      <img src="{{ media | img_url: 'master' }}" alt="{{ media.preview_image.alt | escape }}" loading="lazy" />
-    </div>
-  {% endfor %}
-</div>
+
 
 {%- style -%}
   #QuickShopModal-{{ product.id }}.product__main-photos .product-slideshow {

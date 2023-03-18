@@ -5419,11 +5419,9 @@ lazySizesConfig.expFactor = 4;
         }
 
         this.items = this.getImageData();
-console.log(this.items);
         var image = this.inSlideshow ? this.container.querySelector(selectors.activeImage) : evt.currentTarget.parentNode.querySelector('img');
-console.log(image);
         var index = this.inSlideshow ? this.getChildIndex(image) : image.dataset.index;
-console.log(index);
+
         this.initGallery(this.items, index);
       },
 
@@ -5488,9 +5486,7 @@ console.log(index);
             };
           }
         }
-console.log(items);
-console.log(options);
-console.log(pswpElement);
+
         this.gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
         this.gallery.listen('afterChange', this.afterChange.bind(this));
         this.gallery.init();
@@ -7543,7 +7539,6 @@ console.log(pswpElement);
               let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
               document.getElementById(`klaviyo_variants-${productID}`).addEventListener('change', (e) => {
-                //console.log(e.target.value);
                 variantOption = e.target.value;
               })
 
@@ -8113,14 +8108,19 @@ console.log(pswpElement);
     document.dispatchEvent(new CustomEvent('page:loaded'));
 
     if(!window.location.href.includes('/products/')){
-      document.addEventListener('quickview:loaded', function (evt) {
- 
-        let idProduct = evt.detail.productId.match(/\d/g).join('');
-        
-        console.log(idProduct);
-        let container = document.querySelector(`#Slider-Gallery-template--${idProduct}__main`);
-        let zoom = new theme.Photoswipe(container, idProduct);
-      })
+      document.querySelectorAll('.quick-product__btn').forEach((el) => {
+         el.addEventListener('click', (e) => {
+          
+          document.addEventListener('quickview:loaded', function (evt) {
+
+            let idProduct = evt.detail.productId.match(/\d/g).join('');
+            let container = document.querySelector(`#Slider-Gallery-${evt.detail.productId}-${el.getAttribute('data-product-id')}`);
+            let zoom = new theme.Photoswipe(container, idProduct);
+          })
+
+         });
+      });
+      
     }
 
   });

@@ -55,7 +55,7 @@
 	{%- else -%}
 	  <div class="product__media media gradient global-media-settings" style="padding-top: {{ 1 | divided_by: media.preview_image.aspect_ratio | times: 100 }}%;">
 		<img
-		  class="photoswipe__image lazyload"
+		  class="lazyload"
 		  data-photoswipe-src="{{ zoom_img_url }}"
 		  data-photoswipe-width="{{ media_width }}"
 		  data-photoswipe-height="{{ media_height }}"
@@ -82,7 +82,7 @@
 		>
 
 		{%- if product_zoom_enable and media.media_type == 'image' -%}
-			<button type="button" class="btn btn--body btn--circle js-photoswipe__zoom product__photo-zoom">
+			<button type="button" class="btn btn--body btn--circle">
 			<svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64"><path d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"/></svg>
 			<span class="icon__fallback-text">{{ 'general.accessibility.close_modal' | t }}</span>
 			</button>

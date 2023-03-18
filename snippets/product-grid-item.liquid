@@ -81,7 +81,7 @@ Arguments
     <a href="{{ product.url }}" class="grid-product__link product-link-{{ product.id }}">
       <div class="grid-product__image-mask">
         {%- if quick_shop_enable -%}
-          <div class="quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide">
+          <div class="quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-{{ product.id }} small--hide" data-product-id="{{ product.id }}">
             <span class="quick-product__label">{{ settings.quick_shop_text }}</span>
           </div>
         {%- endif -%}

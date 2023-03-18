@@ -26,7 +26,7 @@
 		</a>
 
       
-		<ul id="Slider-Gallery-{{ section.id }}" class="product__media-list grid grid--peek list-unstyled slider slider--mobile product__media-list-{{ product.media.size }}" role="list">
+		<ul id="Slider-Gallery-{{ section.id }}-{{ product.id }}" class="product__media-list grid grid--peek list-unstyled slider slider--mobile product__media-list-{{ product.media.size }}" role="list">
 			{%- liquid
 			assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
 			assign media_count = product.media.size

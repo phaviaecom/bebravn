@@ -208,13 +208,6 @@
         "space_around": true
       }
     },
-    "1664518585f4b165b7": {
-      "type": "apps",
-      "settings": {
-        "full_width": false,
-        "space_around": true
-      }
-    },
     "16598516943598945e": {
       "type": "rich-text",
       "settings": {
@@ -343,7 +336,6 @@
     "main",
     "sub",
     "judgeme_section_review_widget_6229",
-    "1664518585f4b165b7",
     "16598516943598945e",
     "product-recommendations",
     "recently-viewed",

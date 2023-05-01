@@ -1166,4 +1166,6 @@
     margin-right: -22px !important;
   }
  }
-
+.template-product .hide-product-page{
+	display: none !important;
+}

@@ -41,8 +41,8 @@
 	.product__info-wrapper--extra-padding {
 	  padding-left: 8rem;
 	}
-  
-	.product__media-container .slider-buttons {
+
+    .product__media-container .slider-buttons {
 	  display: none;
 	}
   }

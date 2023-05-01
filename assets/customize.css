@@ -468,9 +468,9 @@
       }
   }
   @media only screen and (max-width: 767px){
-      .slider-mobile-gutter .slider-buttons{
+      <!--.slider-mobile-gutter .slider-buttons{
           display: none;
-      }
+      } -->
       .thumbnail-slider {
         margin-left: -17px;
       }

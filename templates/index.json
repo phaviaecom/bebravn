@@ -213,7 +213,6 @@
         },
         "3b902b3f-5e13-43a9-9aa6-0e9252e066a7": {
           "type": "sale_collection",
-          "disabled": true,
           "settings": {
             "sale_collection": "sale",
             "top_text": "Bis zu",
@@ -228,7 +227,6 @@
         },
         "1fc4e94a-333c-4e6c-8d43-a80105a37bbf": {
           "type": "sale_collection",
-          "disabled": true,
           "settings": {
             "sale_collection": "sale",
             "top_text": "Bis zu",
@@ -250,8 +248,8 @@
       "settings": {
         "full_width": false,
         "gutter_size": 30,
-        "space_above": false,
-        "space_below": false
+        "space_above": true,
+        "space_below": true
       }
     },
     "16634010833a16489b": {
@@ -281,7 +279,6 @@
     },
     "blog-posts": {
       "type": "blog-posts",
-      "disabled": true,
       "settings": {
         "title": "From the journal",
         "blog": "news",
